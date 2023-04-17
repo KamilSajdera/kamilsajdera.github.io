@@ -1,0 +1,191 @@
+@import './_mixins.scss';
+
+@media only screen and (min-width: 424px) 
+{
+
+}
+
+@media only screen and (min-width: 767px)
+{
+    .sectionTitle { font-size: 2rem; }
+    .topBar
+    {
+        padding: 0 10%;
+        height: 60px;
+
+        &_menu { display: none ; }
+
+        &_navigate 
+        {
+            transform: translateX(0);
+            width: 65%;
+            position: static;
+            height: 50px;
+            border: none;
+            background: none;
+        }
+
+        &_navigate ul 
+        {
+            margin: 0;
+            padding: 0;
+            height: 50px;
+            font-size: 0.75rem;   
+            visibility: visible;         
+            @include setFlex(row, space-around, flex-end)
+        }
+    }
+
+
+    .codingWrapper
+    {
+        width: 50%;
+        padding: 30px;
+        opacity: 0.95;
+    }
+
+    .aboutMe
+    {
+        padding: 50px 10%;
+        &_img img { width: 55%; }
+
+    }
+
+    .mySkills_item 
+    {
+        width: 65%;
+    }
+
+}
+
+@media only screen and (min-width: 900px) 
+{
+
+}
+
+
+@media only screen and (min-width: 1023px) 
+{
+    .topBar_navigate
+    {
+        width: 56%;
+    }
+    .topBar_navigate ul
+    {
+        font-size: 0.9rem;
+        text-transform: none;
+    }
+
+    .codingWrapper { width: 30%; }
+
+
+
+    .aboutMe 
+    {
+        padding: 70px 7%;
+
+        &_wrapper 
+        {
+            margin: 20px auto;
+            @include setFlex(row);
+        }
+
+        &_img 
+        { 
+            width: 30%;
+            img { width: 80%; }
+        }
+        &_description 
+        { 
+            width: 70%; 
+            padding-top: 0;
+            font-size: 1rem;
+        }
+        
+    }
+
+    .mySkills
+    {
+        padding-top: 90px; 
+
+        &_item 
+        {
+            width: 33%;
+            margin: 20px 0;
+            transform: scale(0.7);
+            opacity: 0.5;
+            display: inline-block;
+            transition: all .5s;
+        }
+
+
+        #slide-next
+        {
+            right: -1%;
+            top: 60%;
+            display: block;
+        }
+
+        #slide-prev
+        {
+            left: -1%;
+            top: 60%;
+            display: block;
+        }
+    }
+
+
+}
+
+@media only screen and (min-width: 1400px) 
+{
+    .topBar 
+    {
+        height: 80px;
+
+        &_name { font-size: 1.4rem; }
+
+        &_navigate { width: 45%; }
+        &_navigate ul { font-size: 1.05rem; }
+    }
+
+    .aboutMe_wrapper { padding: 0px 7%; }
+}
+
+@media only screen and (min-width: 1920px)
+{
+    .sectionTitle { font-size: 2.2rem; }
+
+    .topBar 
+    { 
+        padding: 0 13%;
+        height: 90px;
+    
+        &_name { font-size: 1.7rem; }
+        &_navigate ul { font-size: 1.35rem; }
+    }
+
+
+    .welcomeMessage
+    {
+        h1 { font-size: 4.5rem; }
+        p {  font-size: 2rem;}
+    }
+
+    .codingWrapper 
+    {
+        width: 25%;
+        padding: 50px;
+        font-size: 1.4rem;
+    }
+
+    .aboutMe_description { font-size: 1.3rem; }
+    .mySkills
+    {
+        padding: 100px 0;
+        margin: 0 3%;
+
+        &_itemsContainer { font-size: 1.4rem; }
+        &_item p { font-size: 1.1rem; }
+    }
+}

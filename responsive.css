@@ -1,0 +1,160 @@
+@media only screen and (min-width: 767px) {
+  .sectionTitle {
+    font-size: 2rem;
+  }
+  .topBar {
+    padding: 0 10%;
+    height: 60px;
+  }
+  .topBar_menu {
+    display: none;
+  }
+  .topBar_navigate {
+    transform: translateX(0);
+    width: 65%;
+    position: static;
+    height: 50px;
+    border: none;
+    background: none;
+  }
+  .topBar_navigate ul {
+    margin: 0;
+    padding: 0;
+    height: 50px;
+    font-size: 0.75rem;
+    visibility: visible;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-end;
+  }
+  .codingWrapper {
+    width: 50%;
+    padding: 30px;
+    opacity: 0.95;
+  }
+  .aboutMe {
+    padding: 50px 10%;
+  }
+  .aboutMe_img img {
+    width: 55%;
+  }
+  .mySkills_item {
+    width: 65%;
+  }
+}
+
+@media only screen and (min-width: 1023px) {
+  .topBar_navigate {
+    width: 56%;
+  }
+  .topBar_navigate ul {
+    font-size: 0.9rem;
+    text-transform: none;
+  }
+  .codingWrapper {
+    width: 30%;
+  }
+  .aboutMe {
+    padding: 70px 7%;
+  }
+  .aboutMe_wrapper {
+    margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .aboutMe_img {
+    width: 30%;
+  }
+  .aboutMe_img img {
+    width: 80%;
+  }
+  .aboutMe_description {
+    width: 70%;
+    padding-top: 0;
+    font-size: 1rem;
+  }
+  .mySkills {
+    padding-top: 90px;
+  }
+  .mySkills_item {
+    width: 33%;
+    margin: 20px 0;
+    transform: scale(0.7);
+    opacity: 0.5;
+    display: inline-block;
+    transition: all .5s;
+  }
+  .mySkills #slide-next {
+    right: -1%;
+    top: 60%;
+    display: block;
+  }
+  .mySkills #slide-prev {
+    left: -1%;
+    top: 60%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  .topBar {
+    height: 80px;
+  }
+  .topBar_name {
+    font-size: 1.4rem;
+  }
+  .topBar_navigate {
+    width: 45%;
+  }
+  .topBar_navigate ul {
+    font-size: 1.05rem;
+  }
+  .aboutMe_wrapper {
+    padding: 0px 7%;
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  .sectionTitle {
+    font-size: 2.2rem;
+  }
+  .topBar {
+    padding: 0 13%;
+    height: 90px;
+  }
+  .topBar_name {
+    font-size: 1.7rem;
+  }
+  .topBar_navigate ul {
+    font-size: 1.35rem;
+  }
+  .welcomeMessage h1 {
+    font-size: 4.5rem;
+  }
+  .welcomeMessage p {
+    font-size: 2rem;
+  }
+  .codingWrapper {
+    width: 25%;
+    padding: 50px;
+    font-size: 1.4rem;
+  }
+  .aboutMe_description {
+    font-size: 1.3rem;
+  }
+  .mySkills {
+    padding: 100px 0;
+    margin: 0 3%;
+  }
+  .mySkills_itemsContainer {
+    font-size: 1.4rem;
+  }
+  .mySkills_item p {
+    font-size: 1.1rem;
+  }
+}
