@@ -1,8 +1,26 @@
 @import url("https://fonts.googleapis.com/css2?family=Abel&family=Comfortaa:wght@300&family=Montserrat&display=swap");
+.myWorks_item__overlay_demo, .myWorks_item__overlay_code {
+  display: block;
+  margin: auto;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  outline: none;
+  border: 2px solid transparent;
+  padding: 10px 45px;
+  text-transform: uppercase;
+  border-radius: 5px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all .3s ease;
+  color: #ccc;
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -96,27 +114,27 @@ body {
 .topBar_navigate ul li a {
   text-decoration: none;
   color: #ccc;
-  display: inline-block;
+  text-shadow: 0px 2px 9px transparent;
 }
 
-.topBar_navigate ul li a:after {
+.topBar_navigate ul li:after {
   content: '';
   width: 0%;
   height: 1px;
   border-bottom: 3px solid #345f6d;
-  display: block;
-  margin-top: 5px;
+  display: inherit;
+  padding-top: 2px;
   transition: width .2s ease;
 }
 
-.topBar_navigate ul li a:hover:after {
+.topBar_navigate ul li:hover:after {
   width: 100%;
 }
 
 .active-item {
+  transition: all .3s ease;
   color: #41a7ab !important;
-  font-weight: 600;
-  text-shadow: 0px 2px 9px #41a7ab;
+  text-shadow: 0px 2px 9px #41a7ab !important;
 }
 
 .menuActive {
@@ -192,7 +210,7 @@ body {
   transition: filter .2s ease;
 }
 
-.aboutMe img:hover {
+.aboutMe_img img:hover {
   filter: brightness(1);
 }
 
@@ -308,4 +326,182 @@ body {
   100% {
     transform: translateY(-15px);
   }
+}
+
+.myWorks {
+  width: 100%;
+  background: #121212;
+  padding: 40px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.myWorks_item {
+  width: 85%;
+  height: 280px;
+  margin: 35px auto;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0px 0px 14px 3px #222222;
+  border-radius: 10px;
+}
+
+.myWorks_item img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all .3s ease;
+  border-radius: 10px;
+}
+
+.myWorks_item__title {
+  position: absolute;
+  top: 15px;
+  left: 25px;
+  padding: 5px 15px;
+  background: #000;
+  z-index: 1;
+}
+
+.myWorks_item__overlay {
+  background: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  overflow: hidden;
+  transition: all .3s ease;
+}
+
+.myWorks_item__overlay a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.myWorks_item__overlay_demo {
+  bottom: 0;
+  background: #3497da;
+}
+
+.myWorks_item__overlay_demo:hover {
+  background: transparent;
+  border-radius: 25px;
+  border: 2px solid #3497da;
+}
+
+.myWorks_item__overlay_code {
+  top: 0;
+  background: #777;
+}
+
+.myWorks_item__overlay_code:hover {
+  background: transparent;
+  border-radius: 25px;
+  border: 2px solid #777;
+}
+
+.skillSet {
+  width: 100%;
+  padding: 80px 10%;
+}
+
+.chartWrapper {
+  width: 100%;
+  height: 400px;
+  color: #ccc;
+  margin-bottom: 300px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.chartWrapper_labels {
+  width: 17%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  border-right: 1px solid #272727;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.chartWrapper_labels li:last-child {
+  margin-bottom: 50px;
+}
+
+.chartWrapper_bars {
+  width: 80%;
+  height: 100%;
+  border-bottom: 1px solid #272727;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+
+.chartWrapper_bars__item {
+  width: 21%;
+  height: 0%;
+  text-align: center;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  position: relative;
+  transition: opacity .2s ease;
+}
+
+.chartWrapper_bars__item:hover {
+  opacity: 0.8;
+}
+
+.chartWrapper_bars__item:nth-child(1) {
+  background: linear-gradient(0deg, #995353, #e18787);
+  border: 1px solid #995353;
+}
+
+.chartWrapper_bars__item:nth-child(2) {
+  background: linear-gradient(0deg, #2e7277, #73a5a8);
+  border: 1px solid #2e7277;
+}
+
+.chartWrapper_bars__item:nth-child(3) {
+  background: linear-gradient(0deg, #646e0e, #858d56);
+  border: 1px solid #646e0e;
+}
+
+.chartWrapper_bars__item:nth-child(4) {
+  background: linear-gradient(0deg, #254f70, #6590cd);
+  border: 1px solid #254f70;
+}
+
+.chartWrapper_bars_name {
+  font-size: 1.6em;
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.chartWrapper_bars_percent {
+  font-size: 1.2em;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #afafaf;
 }

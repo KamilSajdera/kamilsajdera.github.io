@@ -32,7 +32,7 @@
             height: 50px;
             font-size: 0.75rem;   
             visibility: visible;         
-            @include setFlex(row, space-around, flex-end)
+            @include setFlex(row, space-around, flex-end);
         }
     }
 
@@ -55,6 +55,7 @@
     {
         width: 65%;
     }
+
 
 }
 
@@ -135,6 +136,20 @@
     }
 
 
+    .myWorks
+    {
+        padding: 80px 10%;
+        &_item 
+        {
+            width: 45%;
+            height: 305px;
+            margin: 40px 0;
+        }
+    }
+
+    
+
+
 }
 
 @media only screen and (min-width: 1400px) 
@@ -150,6 +165,20 @@
     }
 
     .aboutMe_wrapper { padding: 0px 7%; }
+
+
+    .skillSet
+    {
+        padding: 130px 15%;
+    }
+
+    .chartWrapper 
+    {
+        height: 450px;
+
+        &_labels { width: 10%; }
+        &_bars { width: 85%; }
+    }
 }
 
 @media only screen and (min-width: 1920px)
