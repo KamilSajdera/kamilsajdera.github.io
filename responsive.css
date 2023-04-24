@@ -43,6 +43,9 @@
   .mySkills_item {
     width: 65%;
   }
+  .skillSet {
+    display: block;
+  }
 }
 
 @media only screen and (min-width: 1023px) {
@@ -107,6 +110,21 @@
     height: 305px;
     margin: 40px 0;
   }
+  .footer {
+    padding-inline: 10%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .footer .contact_form {
+    width: 55%;
+  }
+  .footer .socials {
+    width: 40%;
+    margin-left: 5%;
+  }
 }
 
 @media only screen and (min-width: 1400px) {
@@ -136,6 +154,10 @@
   }
   .chartWrapper_bars {
     width: 85%;
+  }
+  .footer .socials {
+    width: 30%;
+    margin-left: 15%;
   }
 }
 

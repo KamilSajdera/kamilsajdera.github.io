@@ -1,6 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Abel&family=Comfortaa:wght@300&family=Montserrat&display=swap');
-@import './_mixins.scss';
-
 
 $user-font: 'Comfortaa', cursive;
 $page-font: 'Montserrat', sans-serif;
@@ -25,6 +23,38 @@ $light-blue: #41a7ab;
     cursor: pointer;
     transition: all .3s ease;
     color: $font-color;
+}
+
+%footer-inputs
+{
+    min-width: 100%;
+    max-width: 100%;
+    outline: none;
+    border: 1px solid #585757;
+    padding: 22px 15px 13px 15px;
+    background: #3a3939;
+    color: #d0d5d5;
+    font-family: $user-font;
+    font-size: 0.9rem;
+    box-sizing: border-box;
+    transition: all .3s ease;
+
+    &:focus ~ .place_holder
+    {
+        top: 4px;
+        font-size: 0.75rem;
+        font-weight: 800;
+        opacity: 0.65;
+    }
+}
+
+@mixin setFlex($flex-direction, $justify-content:center, $align-items:center)
+{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: $flex-direction;
+    justify-content: $justify-content;
+    align-items: $align-items;
 }
 
 
@@ -288,7 +318,7 @@ body
         width: 100%;
         background: #1a1a1a;
         padding: 30px;
-        margin: 20px auto;
+        margin: 35px auto;
         border: 2px solid $light-blue;  
         white-space: normal;
         transition: all .5s;
@@ -357,13 +387,6 @@ body
 {
     background: #000!important;
     height: 50px!important;
-}
-
-
-@keyframes myPhoto 
-{
-    0% { transform: translateY(0px) }
-    100% { transform: translateY(-15px) }
 }
 
 .myWorks
@@ -453,7 +476,9 @@ body
 .skillSet 
 {
     width: 100%;
-    padding: 80px 10%;
+    padding: 80px 10% 20px 10%;
+    background: url(images/dark-triangles.webp) repeat center;
+    display: none;
 }
 
 .chartWrapper 
@@ -461,7 +486,6 @@ body
     width: 100%;
     height: 400px;
     color: $font-color;
-    margin-bottom: 300px;
     @include setFlex(row, center, flex-start);
 
     &_labels 
@@ -476,6 +500,12 @@ body
         text-transform: uppercase;
         font-weight: 700;      
         @include setFlex(column, space-between, flex-start);
+
+        li 
+        {
+            padding-bottom: 3px;
+            border-bottom: 2px solid $dark-blue;
+        }
 
         li:last-child 
         {
@@ -505,26 +535,26 @@ body
 
         &__item:nth-child(1)
         {
-            background: linear-gradient(0deg, #995353, #e18787);
-            border: 1px solid #995353;
+            background: linear-gradient(0deg, #e64c18, #e69366);
+            border: 1px solid #e67747;
         }
 
         &__item:nth-child(2)
         {
-            background: linear-gradient(0deg, #2e7277, #73a5a8);
+            background: linear-gradient(0deg, #1870b9, #73a5a8);
             border: 1px solid #2e7277; 
         }
 
         &__item:nth-child(3)
         {
-            background: linear-gradient(0deg, #646e0e, #858d56);
+            background: linear-gradient(0deg, #e4ba42, #f0c959);
             border: 1px solid #646e0e;
         }
 
         &__item:nth-child(4)
         {
-            background: linear-gradient(0deg, #254f70, #6590cd);
-            border: 1px solid #254f70;
+            background: linear-gradient(0deg, #a5120d, #cd7365);
+            border: 1px solid #842f23;
         }
 
 
@@ -537,6 +567,7 @@ body
             bottom: 30px;
             left: 50%;
             transform: translate(-50%, -50%);
+            color: #fff;
         }
 
         &_percent 
@@ -549,4 +580,141 @@ body
             color: #afafaf;
         }
     }
+}
+
+
+.footer 
+{
+    width: 100%;
+    padding: 60px 5%;
+
+    .contact_form
+    {
+        width: 100%;
+        margin: 10px auto;
+        text-align: center;
+        position: relative;
+
+        &__input 
+        {
+            position: relative;
+            min-height: 50px;
+            margin: 25px 0;
+            font-family: $user-font;
+
+            .place_holder
+            {
+                color: $font-color;
+                font-size: 0.9em;
+                position: absolute;
+                transition: all .3s ease;
+                top: 18px;
+                left: 15px;
+                display: block;
+            }
+        }
+
+        &__usermail,
+        &__topic       
+        {
+            @extend %footer-inputs;
+            position: absolute;
+            top: 0;
+            left: 0;
+            
+        }
+
+        &__textarea 
+        {
+            @extend %footer-inputs;
+            min-height: 200px;
+            max-height: 200px;
+        }
+
+        &__submit 
+        {
+            @extend %overlay-button;
+            transform: none;
+            position: static;
+            background: transparent;
+            border-radius: 25px;
+            border: 2px solid #3497da;
+            transition: all .5s ease-in-out!important;
+
+            &:hover 
+            {
+                background: #3497da;
+                border-radius: 5px;
+            }
+        }
+    }
+
+
+    .socials 
+    {
+        width: 100%;
+        text-align: center;
+        margin: 85px auto 30px auto;
+
+        &_item 
+        {
+            padding: 10px 0;
+            @include setFlex(row, flex-start);
+
+            i 
+            {
+                display: block;
+                width: 40px;
+                height: 40px;
+                background: $dark-blue;
+                line-height: 230%;
+                font-size: 1.15rem;
+                border-radius: 50%;
+                margin-right: 10px;
+                transition: transform .5s ease;
+                
+                &:hover 
+                {
+                    transform: rotate(360deg);
+                }
+            }
+
+            a 
+            {
+                text-decoration: none;
+                color: #a3b6b7;
+                transition: all .3s ease;
+
+                &:hover 
+                {
+                    color: #fff;
+                    text-shadow: 2px 4px 4px #479ba0;
+                }
+            }
+        }
+    }
+}
+
+.no_clear 
+{
+    top: 4px!important;
+    font-size: 0.75rem!important;
+    font-weight: 800!important;
+    opacity: 0.65!important;
+}
+
+.copyright
+{
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    background: #262626;
+    padding-top: 18px;
+    font-size: 0.8rem;
+}
+
+@keyframes myPhoto 
+{
+    0% { transform: translateY(0px) }
+    100% { transform: translateY(-15px) }
 }

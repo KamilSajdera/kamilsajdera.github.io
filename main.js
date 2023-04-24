@@ -2,11 +2,17 @@ AOS.init({
     once: true
 });
 
-const glad = "Im glad you're here.";
-let napis = "";
+const mainCaption = "Im glad you're here.";
+let displayCaption = "";
 let typing;
 
-let wrapper;
+let menuOpen = false;
+
+let clicks = 0;
+
+let bar_height = 0;
+let block = false;
+
 
 $(function() {
 
@@ -15,11 +21,11 @@ $(function() {
 
         typing = setInterval(() => {
     
-        napis += glad[i];
-        $(".welcomeMessage p").html(`${napis}`)
+        displayCaption += mainCaption[i];
+        $(".welcomeMessage p").html(`${displayCaption}`)
         i++;
 
-        if(i>=glad.length)
+        if(i>=mainCaption.length)
             clearInterval(typing)
 
         }, 0100);
@@ -30,7 +36,7 @@ $(function() {
     
 });
 
-let menuOpen = false
+
 $(".topBar_menu").click(() => {
 
     $(".topBar_navigate").toggleClass("menuActive")
@@ -50,7 +56,7 @@ $(".topBar_menu").click(() => {
     }        
 })
 
-let clicks = 0;
+
 
 $("#slide-next").click(() => {
     
@@ -80,18 +86,16 @@ $("#slide-prev").click(() => {
 })
 
 
-let bar_height = 0;
-let block = false;
-
 $(window).on('scroll', function () {
     
+    let scrollValue = $(window).scrollTop();
     const bgWrapper = $("#mainWrapper");
+
     const about = $("#aboutMe").offset().top;
     const services = $("#services").offset().top;
     const myWorks = $("#myWorks").offset().top;
-    
+    const contact = $("#contact").offset().top;
 
-    let scrollValue = $(window).scrollTop();
 
     if ($(window).scrollTop() > 100) 
         $('.topBar').addClass('menu_sticky');
@@ -106,32 +110,31 @@ $(window).on('scroll', function () {
     /// chart bars growing
     if(scrollValue+300 >= $(".chartWrapper").offset().top)
     {
-        if(block)
-            return;
+        if(!block)
+        {
 
-        setInterval(() => {
-            if(bar_height++ >= 80)
-                return;
+            setInterval(() => {
+                if(bar_height++ >= 80)
+                    return;
 
-            $(".chartWrapper_bars__item").eq(1).css("height", bar_height+"%")
-
-            if(bar_height <= 75)
                 $(".chartWrapper_bars__item").eq(0).css("height", bar_height+"%")
+                $(".chartWrapper_bars__item").eq(1).css("height", bar_height+"%")                  
 
-            if(bar_height <= 55)
-                $(".chartWrapper_bars__item").eq(2).css("height", bar_height+"%")
+                if(bar_height <= 55)
+                    $(".chartWrapper_bars__item").eq(2).css("height", bar_height+"%")
 
-            if(bar_height <= 20)
-                $(".chartWrapper_bars__item").eq(3).css("height", bar_height+"%")
-    
-        }, 1000/60);
+                if(bar_height <= 20)
+                    $(".chartWrapper_bars__item").eq(3).css("height", bar_height+"%")
+        
+            }, 1000/60);
 
-        block = true;
+            block = true;
+        }
     }
 
 
 
-    /// active item in menu \
+    /// active item in menu 
 
     if(scrollValue+100 < about)
         $(".topBar_navigate ul li a").eq(0).addClass("active-item");
@@ -150,16 +153,20 @@ $(window).on('scroll', function () {
     else 
         $(".topBar_navigate ul li a").eq(2).removeClass("active-item");
 
-    if(scrollValue+100 >= myWorks)
+
+    if(scrollValue+100 >= myWorks && scrollValue+300 < contact)
         $(".topBar_navigate ul li a").eq(3).addClass("active-item");
     else 
         $(".topBar_navigate ul li a").eq(3).removeClass("active-item");
 
 
-
-
+    if(scrollValue+300 >= contact)
+        $(".topBar_navigate ul li a").eq(4).addClass("active-item");
+    else 
+        $(".topBar_navigate ul li a").eq(4).removeClass("active-item");
     
 });
+
 
 $(".myWorks_item").mouseover(function() { 
 
@@ -191,6 +198,24 @@ $(".myWorks_item").mouseover(function() {
 
 
 
+$(".contact_form__usermail").keyup(function() {
+    if(!$(".contact_form__usermail").val())
+        $(".place_holder").eq(0).removeClass("no_clear");
+    else 
+        $(".place_holder").eq(0).addClass("no_clear");
+});
 
+$(".contact_form__topic").keyup(function() {
+    if(!$(".contact_form__topic").val())
+        $(".place_holder").eq(1).removeClass("no_clear");
+    else 
+        $(".place_holder").eq(1).addClass("no_clear");
+});
 
+$(".contact_form__textarea").keyup(function() {
+    if(!$(".contact_form__textarea").val())
+        $(".place_holder").eq(2).removeClass("no_clear");
+    else 
+        $(".place_holder").eq(2).addClass("no_clear");
+});
   

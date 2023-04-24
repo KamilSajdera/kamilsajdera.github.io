@@ -55,6 +55,11 @@
     {
         width: 65%;
     }
+    
+    .skillSet 
+    {
+        display: block;
+    }
 
 
 }
@@ -147,6 +152,24 @@
         }
     }
 
+
+    .footer 
+    {
+        padding-inline: 10%;
+        @include setFlex(row);
+
+        .contact_form 
+        {
+            width: 55%;
+        }
+
+        .socials
+        {
+            width: 40%;
+            margin-left: 5%;
+        }
+    }
+
     
 
 
@@ -178,6 +201,12 @@
 
         &_labels { width: 10%; }
         &_bars { width: 85%; }
+    }
+
+    .footer .socials 
+    {
+        width: 30%;
+        margin-left: 15%;
     }
 }
 
