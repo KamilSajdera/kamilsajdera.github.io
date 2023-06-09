@@ -123,7 +123,7 @@ $(window).on('scroll', function () {
                 if(bar_height <= 55)
                     $(".chartWrapper_bars__item").eq(2).css("height", bar_height+"%")
 
-                if(bar_height <= 20)
+                if(bar_height <= 35)
                     $(".chartWrapper_bars__item").eq(3).css("height", bar_height+"%")
         
             }, 1000/60);
