@@ -28,7 +28,7 @@ $(function() {
         if(i>=mainCaption.length)
             clearInterval(typing)
 
-        }, 0100);
+        }, 100);
 
         $(".topBar_navigate ul").css("visibility", "visible")
     }, 1200);
@@ -179,7 +179,7 @@ $(".myWorks_item").mouseover(function() {
 
         $(this).find(".myWorks_item__overlay_demo").css("opacity", "1")
         $(this).find(".myWorks_item__overlay_demo").css("bottom", "60px")
-    }, 0250);
+    }, 250);
     
   });
   
@@ -189,10 +189,10 @@ $(".myWorks_item").mouseover(function() {
     $(this).find(".myWorks_item__overlay").css("opacity", "0");
 
     $(this).find(".myWorks_item__overlay_code").css("opacity", "0")
-    $(this).find(".myWorks_item__overlay_code").css("top", "0px")
+    $(this).find(".myWorks_item__overlay_code").css("top", "-25px")
 
     $(this).find(".myWorks_item__overlay_demo").css("opacity", "0")
-    $(this).find(".myWorks_item__overlay_demo").css("bottom", "0px")
+    $(this).find(".myWorks_item__overlay_demo").css("bottom", "-25px")
 
   });
 

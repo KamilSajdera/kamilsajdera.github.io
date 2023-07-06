@@ -444,7 +444,7 @@ body
             &_demo
             {
                 @extend %overlay-button;
-                bottom: 0;
+                bottom: -75px;
                 background: #3497da;
 
                 &:hover 
@@ -458,7 +458,7 @@ body
             &_code
             {
                 @extend %overlay-button;
-                top: 0;
+                top: -25px;
                 background: #777;
 
                 &:hover 
@@ -556,9 +556,6 @@ body
             background: #149eca;
             border: 1px solid #149eca;
         }
-
-
-
 
         &_name
         {
