@@ -120,10 +120,10 @@ $(window).on('scroll', function () {
                 $(".chartWrapper_bars__item").eq(0).css("height", bar_height+"%")
                 $(".chartWrapper_bars__item").eq(1).css("height", bar_height+"%")                  
 
-                if(bar_height <= 55)
+                if(bar_height <= 60)
                     $(".chartWrapper_bars__item").eq(2).css("height", bar_height+"%")
 
-                if(bar_height <= 35)
+                if(bar_height <= 55)
                     $(".chartWrapper_bars__item").eq(3).css("height", bar_height+"%")
         
             }, 1000/60);
