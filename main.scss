@@ -3,7 +3,7 @@
 $user-font: 'Comfortaa', cursive;
 $page-font: 'Montserrat', sans-serif;
 $bg-color1: #171717;
-$font-color: #ccc;
+$font-color: #ececec;
 $dark-blue: #345f6d;
 $light-blue: #41a7ab;
 
@@ -67,7 +67,7 @@ $light-blue: #41a7ab;
 
 body 
 {
-    color: #fff;
+    color: $font-color;
     background: $bg-color1;
     font-family: $page-font;
     font-size: 1rem;
@@ -476,21 +476,38 @@ body
 .skillSet 
 {
     width: 100%;
-    padding: 80px 10% 20px 10%;
-    background: url(images/dark-triangles.webp) repeat center;
-    display: none;
+    padding: 50px 5%;
+    background: #0f0f0f;
+
+    &__description {
+        width: 100%;
+        text-align: center;
+        padding: 50px 10px 25px 10px;
+
+        h2 {
+            text-align: center;
+            padding-bottom: 5px;
+            margin-bottom: 25px;
+            border-bottom: 1px solid #606060;
+            display: inline-block;
+        }
+
+        p {
+            text-align: justify;
+        }
+    }
 }
 
 .chartWrapper 
 {
     width: 100%;
-    height: 400px;
+    height: 300px;
     color: $font-color;
     @include setFlex(row, center, flex-start);
 
     &_labels 
     {
-        width: 17%;
+        width: 25%;
         height: 100%;
         padding: 0;
         margin: 0;
@@ -515,56 +532,36 @@ body
 
     &_bars
     {
-        width: 80%;
+        width: 75%;
         height: 100%;
         border-bottom: 1px solid #272727;
         @include setFlex(row, space-around, flex-end);
 
         &__item 
         {
-            width: 21%;
+            width: 15%;
             height: 0%;
             text-align: center;
-            border-top-left-radius: 5px;
-            border-top-right-radius: 5px;  
+            border-top-left-radius: 3px;
+            border-top-right-radius: 3px;  
             position: relative;
             transition: opacity .2s ease;
+            background-color: #51aac5;
 
             &:hover { opacity: 0.8; }
         }
 
-        &__item:nth-child(1)
-        {
-            background: linear-gradient(0deg, #e64c18, #e69366);
-            border: 1px solid #e67747;
-        }
-
-        &__item:nth-child(2)
-        {
-            background: linear-gradient(0deg, #1870b9, #73a5a8);
-            border: 1px solid #2e7277; 
-        }
-
-        &__item:nth-child(3)
-        {
-            background: linear-gradient(0deg, #e4ba42, #f0c959);
-            border: 1px solid #646e0e;
-        }
-
-        &__item:nth-child(4)
-        {
-            background: #149eca;
-            border: 1px solid #149eca;
-        }
-
         &_name
         {
-            font-size: 1.6em;
+            width: 100%;
+            height: 40px;
+            font-size: 1em;
             position: absolute;
-            bottom: 30px;
+            bottom: -45px;
             left: 50%;
-            transform: translate(-50%, -50%);
+            transform: translateX(-50%);
             color: #fff;
+            display: none;
         }
 
         &_percent 
@@ -577,6 +574,10 @@ body
             color: #afafaf;
         }
     }
+}
+
+.active {
+    box-shadow: 0px 0px 15px 0px #359197;
 }
 
 

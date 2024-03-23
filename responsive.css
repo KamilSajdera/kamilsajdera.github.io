@@ -44,7 +44,14 @@
     width: 65%;
   }
   .skillSet {
-    display: block;
+    padding-inline: 15%;
+  }
+  .chartWrapper {
+    width: 80%;
+    margin: auto;
+  }
+  .chartWrapper_labels {
+    width: 18%;
   }
 }
 
@@ -125,6 +132,27 @@
     width: 40%;
     margin-left: 5%;
   }
+  .skillSet {
+    padding: 40px 5% 80px 5%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .skillSet__description {
+    width: 50%;
+  }
+  .chartWrapper {
+    width: 45%;
+    height: 400px;
+  }
+  .chartWrapper_bars {
+    width: 80%;
+  }
+  .chartWrapper_bars__item {
+    width: 17%;
+  }
+  .chartWrapper_bars_name {
+    display: block;
+  }
 }
 
 @media only screen and (min-width: 1400px) {
@@ -143,14 +171,11 @@
   .aboutMe_wrapper {
     padding: 0px 7%;
   }
-  .skillSet {
-    padding: 130px 15%;
-  }
   .chartWrapper {
     height: 450px;
   }
   .chartWrapper_labels {
-    width: 10%;
+    width: 15%;
   }
   .chartWrapper_bars {
     width: 85%;
@@ -158,6 +183,9 @@
   .footer .socials {
     width: 30%;
     margin-left: 15%;
+  }
+  .skillSet {
+    padding-inline: 10%;
   }
 }
 

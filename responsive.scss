@@ -1,8 +1,10 @@
-@import './_mixins.scss';
-
-@media only screen and (min-width: 424px) 
+@mixin setFlex($flex-direction, $justify-content:center, $align-items:center)
 {
-
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: $flex-direction;
+    justify-content: $justify-content;
+    align-items: $align-items;
 }
 
 @media only screen and (min-width: 767px)
@@ -58,14 +60,20 @@
     
     .skillSet 
     {
-        display: block;
+        padding-inline: 15%;
     }
 
+    .chartWrapper 
+    {
+        width: 80%;
+        margin: auto;
 
-}
+        &_labels 
+        {
+            width: 18%;
+        }
+    }
 
-@media only screen and (min-width: 900px) 
-{
 
 }
 
@@ -83,8 +91,6 @@
     }
 
     .codingWrapper { width: 30%; }
-
-
 
     .aboutMe 
     {
@@ -170,8 +176,33 @@
         }
     }
 
-    
+    .skillSet 
+    {
+        padding: 40px 5% 80px 5%;
+        display: flex;
+        justify-content: space-between;
 
+        &__description {
+            width: 50%;
+        }
+    }
+
+    .chartWrapper 
+    {
+        width: 45%;
+        height: 400px;
+
+        &_bars 
+        { 
+            width: 80%;
+
+            &__item 
+            { width: 17%; }
+
+            &_name 
+            { display: block; }
+        }
+    }
 
 }
 
@@ -189,17 +220,11 @@
 
     .aboutMe_wrapper { padding: 0px 7%; }
 
-
-    .skillSet
-    {
-        padding: 130px 15%;
-    }
-
     .chartWrapper 
     {
         height: 450px;
 
-        &_labels { width: 10%; }
+        &_labels { width: 15%; }
         &_bars { width: 85%; }
     }
 
@@ -207,6 +232,11 @@
     {
         width: 30%;
         margin-left: 15%;
+    }
+
+    .skillSet 
+    { 
+        padding-inline: 10%;
     }
 }
 
