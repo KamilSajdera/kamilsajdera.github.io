@@ -17,9 +17,7 @@ const skillTextH2 = $(".skillSet__description h2");
 const skillTextDescription = $(".skillSet__description p");
 
 function handle(event) {
-  event.preventDefault();
-  console.log("dde");
-  
+  event.preventDefault();  
 }
 
 const descriptions = [
@@ -123,6 +121,17 @@ $("#slide-prev").click(() => {
       .toggleClass("mid");
   }
 });
+
+$(".topBar_language_PL").click(function () {
+  $(this).addClass("active_lan");
+  $(".topBar_language_EN").removeClass("active_lan")
+});
+
+$(".topBar_language_EN").click(function () {
+  $(this).addClass("active_lan");
+  $(".topBar_language_PL").removeClass("active_lan")
+});
+
 
 $(window).on("scroll", function () {
   let scrollValue = $(window).scrollTop();

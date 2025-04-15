@@ -36,6 +36,12 @@
             visibility: visible;         
             @include setFlex(row, space-around, flex-end);
         }
+
+        &_language {
+            right: 10px;
+            top: 35%;
+            font-size: 0.8em;
+        }
     }
 
 
@@ -215,6 +221,18 @@
 
         &_navigate { width: 45%; }
         &_navigate ul { font-size: 1.05rem; }
+
+        &_language {
+            font-size: 1.15em;
+            right: 15px;
+            top: 35%;
+        }
+
+        &.menu_sticky {
+            .topBar_language {
+                top: 29%;
+            }
+        }
     }
 
     .aboutMe_wrapper { padding: 0px 7%; }
