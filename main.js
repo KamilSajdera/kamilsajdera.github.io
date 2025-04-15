@@ -195,10 +195,10 @@ $(".myWorks_item").mouseover(function () {
 
   setTimeout(() => {
     $(this).find(".myWorks_item__overlay_code").css("opacity", "1");
-    $(this).find(".myWorks_item__overlay_code").css("top", "90px");
+    $(this).find(".myWorks_item__overlay_code").css("bottom", "15px");
 
     $(this).find(".myWorks_item__overlay_demo").css("opacity", "1");
-    $(this).find(".myWorks_item__overlay_demo").css("bottom", "60px");
+    $(this).find(".myWorks_item__overlay_demo").css("bottom", "15px");
   }, 250);
 });
 
@@ -207,7 +207,7 @@ $(".myWorks_item").mouseleave(function () {
   $(this).find(".myWorks_item__overlay").css("opacity", "0");
 
   $(this).find(".myWorks_item__overlay_code").css("opacity", "0");
-  $(this).find(".myWorks_item__overlay_code").css("top", "-25px");
+  $(this).find(".myWorks_item__overlay_code").css("bottom", "-25px");
 
   $(this).find(".myWorks_item__overlay_demo").css("opacity", "0");
   $(this).find(".myWorks_item__overlay_demo").css("bottom", "-25px");
