@@ -16,6 +16,12 @@ const chartBars = $(".chartWrapper_bars__item");
 const skillTextH2 = $(".skillSet__description h2");
 const skillTextDescription = $(".skillSet__description p");
 
+function handle(event) {
+  event.preventDefault();
+  console.log("dde");
+  
+}
+
 const descriptions = [
   {
     title: "HTML & CSS",

@@ -97,7 +97,6 @@
     transform: scale(0.7);
     opacity: 0.5;
     display: inline-block;
-    transition: all .5s;
   }
   .mySkills #slide-next {
     right: -1%;

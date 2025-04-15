@@ -4,7 +4,7 @@ $user-font: 'Comfortaa', cursive;
 $page-font: 'Montserrat', sans-serif;
 $bg-color1: #171717;
 $font-color: #ececec;
-$dark-blue: #345f6d;
+$dark-blue: #6284a9;
 $light-blue: #41a7ab;
 
 %overlay-button
@@ -30,14 +30,15 @@ $light-blue: #41a7ab;
     min-width: 100%;
     max-width: 100%;
     outline: none;
-    border: 1px solid #585757;
+    border: 1px solid #3d3d3d;
     padding: 22px 15px 13px 15px;
-    background: #3a3939;
+    background: #2c2c2c;
     color: #d0d5d5;
     font-family: $user-font;
     font-size: 0.9rem;
     box-sizing: border-box;
     transition: all .3s ease;
+    border-radius: 3px;
 
     &:focus ~ .place_holder
     {
@@ -222,6 +223,7 @@ body
     font-family: 'Abel', sans-serif;
     color: #f0f0f0;
     position: relative;
+    filter: drop-shadow(2px 4px 6px black);
    
     p {
         padding: 2px 0 2px 30px;
@@ -231,6 +233,11 @@ body
 .syntax 
 {
     color: #8fcd9e;
+    font-weight: 700;
+}
+
+.syntax-pre {
+    color: #9d9de6;
     font-weight: 700;
 }
 
@@ -316,12 +323,15 @@ body
     &_item 
     {
         width: 100%;
-        background: #1a1a1a;
+        background: #131313;
         padding: 30px;
         margin: 35px auto;
-        border: 2px solid $light-blue;  
+        border-radius: 15px;
         white-space: normal;
         transition: all .5s;
+        border: 1px solid #1f1f1f;
+        filter: drop-shadow(1px 4px 11px black);
+        
 
         i 
         {
@@ -386,7 +396,7 @@ body
 .menu_sticky
 {
     background: #000!important;
-    height: 50px!important;
+    height: 55px!important;
 }
 
 .myWorks
@@ -403,7 +413,7 @@ body
         margin: 35px auto;
         overflow: hidden;
         position: relative;
-        box-shadow: 0px 0px 14px 3px #222222;
+        box-shadow: 0px 0px 14px 3px #1a1a1a;
         border-radius: 10px;
 
         img
@@ -546,7 +556,7 @@ body
             border-top-right-radius: 3px;  
             position: relative;
             transition: opacity .2s ease;
-            background-color: #51aac5;
+            background-color: #63d7fa;
 
             &:hover { opacity: 0.8; }
         }
