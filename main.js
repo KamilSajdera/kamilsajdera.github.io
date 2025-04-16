@@ -24,6 +24,18 @@ function handle(event) {
 }
 
 $(function () {
+  const language = localStorage.getItem("lang") || "en"
+  setLanguage(language);
+
+  if(language === "pl") {
+    $(".topBar_language_PL").addClass("active_lan");
+    $(".topBar_language_EN").removeClass("active_lan");
+  } else 
+  {
+    $(".topBar_language_EN").addClass("active_lan");
+    $(".topBar_language_PL").removeClass("active_lan");
+  }
+
   let date = new Date();
   let birthdayDate = new Date("2003-03-13");
   let myAge = date.getFullYear() - birthdayDate.getFullYear();
@@ -39,6 +51,7 @@ $(function () {
     let i = 0;
 
     typing = setInterval(() => {
+      
       displayCaption += mainCaption[i];
       $(".welcomeMessage p").html(`${displayCaption}`);
       i++;
