@@ -2,7 +2,7 @@ AOS.init({
   once: true,
 });
 
-const mainCaption = "Im glad you're here.";
+let mainCaption = "Im glad you're here.";
 let displayCaption = "";
 let typing;
 
@@ -16,34 +16,12 @@ const chartBars = $(".chartWrapper_bars__item");
 const skillTextH2 = $(".skillSet__description h2");
 const skillTextDescription = $(".skillSet__description p");
 
-function handle(event) {
-  event.preventDefault();  
-}
+let transitions;
+let descriptions = [];
 
-const descriptions = [
-  {
-    title: "HTML & CSS",
-    description: `I can design website structures using <b>semantic HTML elements</b>, which not only improves the readability of the code, but also has a positive effect on the website's accessibility and positioning in search results. I have experience in creating HTML forms using various field types and handling client-side validation using HTML5 attributes such as <i>required</i> and <i>pattern</i>. <br /> <br />
-    I can use a variety of CSS selectors, including class and ID selectors, as well as pseudo-classes and pseudo-elements, to precisely style elements on a page. I have deep knowledge of <b>flexbox</b> and <b>grid layout</b>, which allows me to design flexible and responsive website layouts that scale perfectly on various devices. I have experience in working with CSS preprocessors such as <b>SASS</b> and <b>LESS</b>, which allows me to more conveniently manage style using variables, mixins and functions.`,
-  },
-  {
-    title: "JavaScript",
-    description: `I am skilled in manipulating the DOM tree using JavaScript, which allows me to dynamically add, remove and modify elements on the page depending on user actions. I am familiar with <b>asynchrony concepts</b> in JavaScript such as <i>Callbacks</i>, <i>Promises</i> and <i>Async/Await</i>, which allows me to handle operations that require time-consuming data downloading from external sources (API). I know concepts such as primitive/complex types, event loop, destructuring, spread operator and scope. <br /> <br />
-    I have also made several projects in jQuery, so I can confidently say that it is not a problem for me. I can animate jQuery applications with smooth transitions, size changes, and the appearance of elements, which results in a more attractive website. I can use various events and respond to user interactions in an efficient and clear way. I can integrate and customize jQuery plugins, using ready-made solutions available in this library's ecosystem.`,
-  },
-  {
-    title: "React",
-    description: `React is definitely the environment in which I write best. I can manage state in local and global (<b>Context API, Redux</b>) and respond to user interactions using event handling functions, I understand the life cycle of components.
-    I can manage forms, authorize users and create my own custom hooks. I am able to optimize my React application, for example through <i>useMemo, useCallback</i> or <i>lazy loading</i>. <br />
-    I successfully write applications using React Router using its hooks such as useNavigate, useNavigation, useFetcher, useParams, useSearchParams, useLocation, useSubmit and use(Route)LoaderData.
-    I know various ways and approaches to communicate with the server (including <b>Tanstack Query</b>), which allows me to manage data asynchronously and update the UI based on the response from the server. I always ensure a good 'loading state' and an appropriate 'error state'.`,
-  },
-  {
-    title: "Next JS",
-    description:
-      "Currently in the process of learning... Soon there will be quite a lot of material to present here ;)",
-  },
-];
+function handle(event) {
+  event.preventDefault();
+}
 
 $(function () {
   let date = new Date();
@@ -73,8 +51,7 @@ $(function () {
 
   skillTextH2.text(descriptions[0].title);
   skillTextDescription.html(descriptions[0].description);
-  chartBars.eq(0).addClass('active')
-
+  chartBars.eq(0).addClass("active");
 });
 
 $(".topBar_menu").click(() => {
@@ -123,15 +100,16 @@ $("#slide-prev").click(() => {
 });
 
 $(".topBar_language_PL").click(function () {
+  setLanguage("pl");
   $(this).addClass("active_lan");
-  $(".topBar_language_EN").removeClass("active_lan")
+  $(".topBar_language_EN").removeClass("active_lan");
 });
 
 $(".topBar_language_EN").click(function () {
+  setLanguage("en");
   $(this).addClass("active_lan");
-  $(".topBar_language_PL").removeClass("active_lan")
+  $(".topBar_language_PL").removeClass("active_lan");
 });
-
 
 $(window).on("scroll", function () {
   let scrollValue = $(window).scrollTop();
@@ -252,3 +230,45 @@ chartBars.click(function () {
     $(this).addClass("active");
   }
 });
+
+function loadLanguageFile(lang) {
+  return $.getScript(`lang/lang-${lang}.js`);
+}
+
+function applyTranslations() {
+  const elements = $("[data-i18n]");
+  elements.each(function () {
+    const key = $(this).data("i18n");
+    if (translations[key]) {
+      $(this).html(translations[key]);
+    }
+  });
+}
+
+function setLanguage(lang) {
+  localStorage.setItem("lang", lang);
+
+  $.getScript(`lang/lang-${lang}.js`)
+    .done(function () {
+      const elements = $("[data-i18n]");
+      const translation = window.translations;
+
+      mainCaption = translation.mainCaption;
+      descriptions = translation.descriptions;
+
+      skillTextH2.text(descriptions[0].title);
+      skillTextDescription.html(descriptions[0].description);
+      chartBars.removeClass("active");
+      chartBars.eq(0).addClass("active");
+
+      elements.each(function () {
+        const key = $(this).data("i18n");
+        if (translation[key]) {
+          $(this).html(translation[key]);
+        }
+      });
+    })
+    .fail(function () {
+      console.error("Error -> Failed to fetch lang file!");
+    });
+}
