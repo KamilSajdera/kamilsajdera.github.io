@@ -26,7 +26,7 @@ window.translations = {
   projectText1:
     "Projekt symulujący „organizer”, dzięki któremu wszystkie wydarzenia, wydatki i zadania będziesz mieć w jednym miejscu.",
   projectText2:
-    "Narzędzie do tworzenia nut gotowych do druku, z możliwością odsłuchania zapisanej linii melodycznej w dowolnym tempie.",
+    "Narzędzie do tworzenia zapisu nutowego (linii melodycznej), z bogatym wyborem narzędzi określających szczegóły tego zapisu. Możliwość odsłuchania dźwięk po dźwięku w dowolnym tempie stworzonego zapisu.",
   projectText3:
     "Aplikacja dla restauracji typu fast food umożliwiająca personalizację dań z różnych kategorii, rozmiarów czy doborze dodatków.",
   projectText4:
