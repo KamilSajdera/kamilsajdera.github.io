@@ -8,20 +8,21 @@ window.translations = {
   welcome2: "Cieszę się, że tu jesteś.",
   aboutText:
     "Cześć! Jestem Kamil Sajdera, młody programista front-end, który nie tylko pisze kod – rozumie, dlaczego go pisze. Nie mam stosu certyfikatów ani wielkiego doświadczenia korporacyjnego, ale mam coś o wiele cenniejszego: czystą motywację, pasję i setki godzin samodzielnej nauki kodowania i tworzenia prawdziwych projektów. Szybko się uczę, działam konsekwentnie i zawsze skupiam się na znajdowaniu rozwiązań – nie wymówek. Zacząłem od C++ i wtyczek do gier, ponieważ chciałem zrozumieć, jak te rzeczy działają od środka. Wtedy już wiedziałem, że chce to robić w przyszłości. Odkryłem front-end i trzymam się go do dziś. Dzięki połączeniu analitycznego myślenia, dobrego oka do szczegółów i kreatywnej iskry staram się wnieść wartość do każdego projektu, którego się podejmuję. Pracuję niezależnie, jasno się komunikuję i zawsze staram się doskonalić. Jako Junior zadaję wiele pytań, ponieważ wierzę, że właściwe zrozumienie problemu jest kluczową cechą na drodze do osiągnięcia najlepszego rozwiązania. Poza ekranem gram na perkusji, gitarze basowej i saksofonie, produkuję muzykę i gram w siatkówkę – ponieważ rytm i energia mają znaczenie zarówno w kodzie, jak i w życiu.",
-  skillsHeader1: "Czysty kod",
-  skillsHeader2: "Front-End",
-  skillsHeader3: "RWD",
-  skillsHeader4: "CMS/SQL",
+  skillsHeader1: "Dostępność & Czysty Kod",
+  skillsHeader2: "Nowoczesny Front-End",
+  skillsHeader3: "Responsywność & UX",
+  skillsHeader4: "CMS & SQL",
   skillsHeader5: "Praca zespołowa",
   skillsText1:
-    "Pisanie czystego kodu jest dla mnie jedną z najważniejszych cech. Uwarzam, że jest to kluczowe, aby osiągnąć najlepszą możliwą wydajność. Staram się, aby mój kod był czytelny i uporządkowany. Dbałość o to jest dla mnie podstawą.",
+    "Piszę kod, który jest nie tylko estetyczny i dobrze zorganizowany, ale przede wszystkim dostępny dla wszystkich. Stosuję zasady WCAG, dbam o semantyczny HTML, odpowiedni kontrast kolorów i nawigację klawiaturą. Dążę do tego, by każdy użytkownik – niezależnie od urządzenia czy ograniczeń – mógł komfortowo korzystać z aplikacji.",
   skillsText2:
-    "Kiedy koduję wygląd strony internetowej, czuję się spełniony i poświęcam maksimum uwagi jej realizacji. Pisanie aplikacji webowych nie stanowi dla mnie problemu. Dzięki mojemu doświadczeniu nie boję się wyzwań i podejmuję się coraz trudniejszych zadań.",
-  skillsText3: `Stosuję metodę „mobile-first”, ale mogę też kodować na odwrót. Większość ludzi korzysta z urządzeń mobilnych. To sprawia, że ​​dbam o każdy szczegół, aby dostosować moją stronę internetową do każdego urządzenia. Niezależnie od tego, czy jest to telefon, tablet czy komputer, moja strona jest zawsze aktualna.`,
+    "Stale śledzę trendy w front-endzie. Korzystam z React (z hookami i komponentami funkcyjnymi), NextJS (aplikacje FullStack), SASS i Vite/Webpack. Mam doświadczenie z TypeScriptem i potrafię pisać komponenty w pełni typowane. Dążę do tego aby mój kod był skalowalny i łatwy w utrzymaniu.",
+  skillsText3: `Projektuję i wdrażam interfejsy, które działają płynnie na każdym urządzeniu – od telefonu po ultrapanoramiczne monitory.
+    Na każdym etapie projektu zwracam uwagę na prawidłową dostępność elementów na różnych urządzeniach. Zwracam uwagę na mikrodetal UX, animacje, szybkość interakcji i ergonomię.`,
   skillsText4:
-    "Przez 3 lata pracowałem jako administrator strony internetowej na silniku IPS 4.x. Dbałem o prawidłowe funkcjonowanie i bezpieczeństwo strony, wprowadzając modyfikacje i wdrażając sugestie użytkowników. Pracowałem z bazami danych i biegle posługiwałem się MySQL za pomocą zapytań.",
+    "Jako wielomiesięczny administrator strony internetowej opartej na systemie zarządzania treścią <b>IPS 4.x.</b> dbałem o prawidłowe funkcjonowanie i bezpieczeństwo strony. Wprowadzałem modyfikacje i wdrażałem sugestie użytkowników. Dobrze odnajduje się w temacie pobieranie/modyfikowania danych w bazach danych oraz pracy z phpmyadmin.",
   skillsText5:
-    "Dzięki moim umiejętnościom interpersonalnym świetnie dogaduję się w zespole i lubię pracować w grupie. Lubię pracować z GIT, prezentować i opisywać swoją pracę. Myślę, że to świetne narzędzie, które powinien znać każdy programista!",
+    "Współpraca to podstawa. Świetnie odnajduję się w zespołach developerskich, korzystam z <b>GIT</b>'a, przykładam wagę do czytelnych commitów, komunikacji i wspólnego rozwiązywania problemów.",
   projectText1:
     "Projekt symulujący „organizer”, dzięki któremu wszystkie wydarzenia, wydatki i zadania będziesz mieć w jednym miejscu.",
   projectText2:
