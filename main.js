@@ -24,14 +24,13 @@ function handle(event) {
 }
 
 $(function () {
-  const language = localStorage.getItem("lang") || "en"
+  const language = localStorage.getItem("lang") || "en";
   setLanguage(language);
 
-  if(language === "pl") {
+  if (language === "pl") {
     $(".topBar_language_PL").addClass("active_lan");
     $(".topBar_language_EN").removeClass("active_lan");
-  } else 
-  {
+  } else {
     $(".topBar_language_EN").addClass("active_lan");
     $(".topBar_language_PL").removeClass("active_lan");
   }
@@ -47,24 +46,9 @@ $(function () {
 
   myAgeContainer.text(myAge);
 
-  setTimeout(() => {
-    let i = 0;
+  let i = 0;
 
-    typing = setInterval(() => {
-      
-      displayCaption += mainCaption[i];
-      $(".welcomeMessage p").html(`${displayCaption}`);
-      i++;
-
-      if (i >= mainCaption.length) clearInterval(typing);
-    }, 100);
-
-    $(".topBar_navigate ul").css("visibility", "visible");
-  }, 1200);
-
-  skillTextH2.text(descriptions[0].title);
-  skillTextDescription.html(descriptions[0].description);
-  chartBars.eq(0).addClass("active");
+  $(".topBar_navigate ul").css("visibility", "visible");
 });
 
 $(".topBar_menu").click(() => {
@@ -244,29 +228,15 @@ chartBars.click(function () {
   }
 });
 
-function loadLanguageFile(lang) {
-  return $.getScript(`lang/lang-${lang}.js`);
-}
-
-function applyTranslations() {
-  const elements = $("[data-i18n]");
-  elements.each(function () {
-    const key = $(this).data("i18n");
-    if (translations[key]) {
-      $(this).html(translations[key]);
-    }
-  });
-}
-
 function setLanguage(lang) {
   localStorage.setItem("lang", lang);
 
   $.getScript(`lang/lang-${lang}.js`)
     .done(function () {
       const elements = $("[data-i18n]");
-      const translation = window.translations;
+      let translation = window.translations;
 
-      mainCaption = translation.mainCaption;
+      mainCaption = translation.welcome2;
       descriptions = translation.descriptions;
 
       skillTextH2.text(descriptions[0].title);
@@ -280,6 +250,22 @@ function setLanguage(lang) {
           $(this).html(translation[key]);
         }
       });
+
+      displayCaption = "";
+      let i = 0;
+      clearInterval(typing);
+
+      if (!mainCaption) {
+        console.warn("mainCaption is not set");
+        return;
+      }
+
+      typing = setInterval(() => {
+        displayCaption += mainCaption[i];
+        $(".welcomeMessage p").html(displayCaption);
+        i++;
+        if (i >= mainCaption.length) clearInterval(typing);
+      }, 100);
     })
     .fail(function () {
       console.error("Error -> Failed to fetch lang file!");
