@@ -13,6 +13,7 @@ window.translations = {
   skillsHeader3: "Responsywność & UX",
   skillsHeader4: "CMS & SQL",
   skillsHeader5: "Praca zespołowa",
+  skillsHeader6: "Poczucie estetyki",
   skillsText1:
     "Piszę kod, który jest nie tylko estetyczny i dobrze zorganizowany, ale przede wszystkim dostępny dla wszystkich. Stosuję zasady WCAG, dbam o semantyczny HTML, odpowiedni kontrast kolorów i nawigację klawiaturą. Dążę do tego, by każdy użytkownik – niezależnie od urządzenia czy ograniczeń – mógł komfortowo korzystać z aplikacji.",
   skillsText2:
@@ -23,6 +24,8 @@ window.translations = {
     "Jako wielomiesięczny administrator strony internetowej opartej na systemie zarządzania treścią <b>IPS 4.x.</b> dbałem o prawidłowe funkcjonowanie i bezpieczeństwo strony. Wprowadzałem modyfikacje i wdrażałem sugestie użytkowników. Dobrze odnajduje się w temacie pobieranie/modyfikowania danych w bazach danych oraz pracy z phpmyadmin.",
   skillsText5:
     "Współpraca to podstawa. Świetnie odnajduję się w zespołach developerskich, korzystam z <b>GIT</b>'a, przykładam wagę do czytelnych commitów, komunikacji i wspólnego rozwiązywania problemów.",
+  skillsText6:
+    "Mam wyczucie estetyki i detali. Potrafię dopracować interfejs tak, aby był nie tylko funkcjonalny, ale też przyjemny dla oka. Zwracam uwagę na spacing, kolory, typografię i hierarchię wizualną.",
   projectText1:
     "Projekt symulujący „organizer”, dzięki któremu wszystkie wydarzenia, wydatki i zadania będziesz mieć w jednym miejscu.",
   projectText2:
