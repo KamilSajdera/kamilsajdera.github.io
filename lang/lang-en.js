@@ -16,7 +16,7 @@ window.translations = {
     skillsText2: "I constantly follow trends in front-end. I use React (with hooks and functional components), NextJS (FullStack applications), SASS and Vite/Webpack. I have experience with TypeScript and can write fully typed components. I strive for my code to be scalable and easy to maintain.",
     skillsText3: "I design and implement interfaces that work smoothly on any device – from phones to ultrawide monitors. At every stage of the project, I pay attention to the correct accessibility of elements on different devices. I pay attention to the micro-details of UX, animations, speed of interaction and ergonomics.",
     skillsText4: "As a multi-month website's admin based on the IPS 4.x content management system, I took care of the proper functioning and security of the site. I made modifications and implemented user suggestions. I am well versed in the topic of downloading/modifying data in databases and working with phpmyadmin.",
-    skillsText5: "Thanks to my interpersonal skills, I get along great in a team and I like working in a group. I like working with GIT, presenting and describing my work by clear commits. ",
+    skillsText5: "Collaboration is key. I thrive in development teams, I use GIT, I value clear commits, communication, and joint problem solving.",
     projectText1: "A project simulating an 'organizer' thanks to which you keep your events, expenses and to-dos in one place.",
     projectText2: "A tool for creating sheet music ready for printing, with the ability to listen to the written melody line at any tempo.",
     projectText3: "The fast food restaurant app has a variety of customizable items to eat, sizes or toppings for each one.",
