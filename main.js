@@ -67,7 +67,7 @@ $(".topBar_menu").click(() => {
 });
 
 $("#slide-next").click(() => {
-  if (clicks < 3) {
+  if (clicks < 4) {
     clicks++;
     $(".mySkills_itemsContainer").css(
       "transform",
