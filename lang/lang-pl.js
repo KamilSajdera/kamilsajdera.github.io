@@ -24,8 +24,7 @@ window.translations = {
     "Jako wielomiesięczny administrator strony internetowej opartej na systemie zarządzania treścią <b>IPS 4.x.</b> dbałem o prawidłowe funkcjonowanie i bezpieczeństwo strony. Wprowadzałem modyfikacje i wdrażałem sugestie użytkowników. Dobrze odnajduje się w temacie pobieranie/modyfikowania danych w bazach danych oraz pracy z phpmyadmin.",
   skillsText5:
     "Współpraca to podstawa. Świetnie odnajduję się w zespołach developerskich, korzystam z <b>GIT</b>'a, przykładam wagę do czytelnych commitów, komunikacji i wspólnego rozwiązywania problemów.",
-  skillsText6:
-    "Mam wyczucie estetyki i detali. Potrafię dopracować interfejs tak, aby był nie tylko funkcjonalny, ale też przyjemny dla oka. Zwracam uwagę na spacing, kolory, typografię i hierarchię wizualną.",
+  skillsText6: "Mam wyczucie estetyki i detali. Potrafię dopracować interfejs tak, aby był nie tylko funkcjonalny, ale też przyjemny dla oka. Zwracam uwagę na spacing, kolory, typografię i hierarchię wizualną.",
   projectText1:
     "Projekt symulujący „organizer”, dzięki któremu wszystkie wydarzenia, wydatki i zadania będziesz mieć w jednym miejscu.",
   projectText2:
@@ -46,7 +45,10 @@ window.translations = {
     I successfully write applications using React Router using its hooks such as useNavigate, useNavigation, useFetcher, useParams, useSearchParams, useLocation, useSubmit and use(Route)LoaderData.
     I know various ways and approaches to communicate with the server (including <b>Tanstack Query</b>), which allows me to manage data asynchronously and update the UI based on the response from the server. I always ensure a good 'loading state' and an appropriate 'error state'.`,
   nextJsText:
-    "Currently in the process of learning... Soon there will be quite a lot of material to present here ;)",
+    `Tworzę nowoczesne aplikacje frontendowe z wykorzystaniem Next.js (App Router), wykorzystując różne strategie renderowania: <b><i>SSR, SSG</i></b> oraz <b><i>ISR</i></b> – w zależności od wymagań projektu. Potrafię konfigurować routing oparty na strukturze folderów, w tym trasy dynamiczne, zagnieżdżone oraz prywatne. Korzystam z layoutów, komponentów serwerowych i klienckich, rozumiem ich różnice oraz wpływ na <b>wydajność</b> aplikacji.
+    <br />Wiem jak pobierać i mutować dane zarówno po stronie klienta, jak i serwera, przy pomocy <i>fetch, server actions, custom hooks</i>. Potrafię konfigurować cache, zarządzać revalidacją danych oraz kontrolować strategię aktualizacji UI. Dbam o odpowiednie stany ładowania, błędów i fallbacków.
+    <br /><br />Znam techniki optymalizacji Next.js, takie jak <b>lazy loading, dynamiczne importy, dzielenie kodu, preload zasobów</b> czy optymalizacja obrazów za pomocą komponentu <b><i>next/image</i></b>. Potrafię wdrażać uwierzytelnianie z wykorzystaniem <i>NextAuth</i> czy z użyciem <i>JWT</i> i zarządzać sesją użytkownika po stronie klienta i serwera.
+    Dodatkowo dbam o <b>SEO</b> aplikacji — konfiguruję metadane, nagłówki, struktury adresów URL i optymalizuję treści renderowane po stronie serwera.`,
   contactTopic: "Temat",
   contactMsg: "Wiadomość",
   contactBtn: "Wyślij",
@@ -71,7 +73,10 @@ window.translations = {
     },
     {
       title: "Next JS",
-      description: "W trakcie...",
+      description: `Tworzę nowoczesne aplikacje frontendowe z wykorzystaniem Next.js (App Router), wykorzystując różne strategie renderowania: <b><i>SSR, SSG</i></b> oraz <b><i>ISR</i></b> – w zależności od wymagań projektu. Potrafię konfigurować routing oparty na strukturze folderów, w tym trasy dynamiczne, zagnieżdżone oraz prywatne. Korzystam z layoutów, komponentów serwerowych i klienckich, rozumiem ich różnice oraz wpływ na <b>wydajność</b> aplikacji.
+    <br />Wiem jak pobierać i mutować dane zarówno po stronie klienta, jak i serwera, przy pomocy <i>fetch, server actions, custom hooks</i>. Potrafię konfigurować cache, zarządzać revalidacją danych oraz kontrolować strategię aktualizacji UI. Dbam o odpowiednie stany ładowania, błędów i fallbacków.
+    <br /><br />Znam techniki optymalizacji Next.js, takie jak <b>lazy loading, dynamiczne importy, dzielenie kodu, preload zasobów</b> czy optymalizacja obrazów za pomocą komponentu <b><i>next/image</i></b>. Potrafię wdrażać uwierzytelnianie z wykorzystaniem <i>NextAuth</i> czy z użyciem <i>JWT</i> i zarządzać sesją użytkownika po stronie klienta i serwera.
+    Dodatkowo dbam o <b>SEO</b> aplikacji — konfiguruję metadane, nagłówki, struktury adresów URL i optymalizuję treści renderowane po stronie serwera.`,
     },
   ],
 };
