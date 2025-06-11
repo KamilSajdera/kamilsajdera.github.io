@@ -1,346 +1,531 @@
 <!DOCTYPE html>
 <html lang="pl">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kamil Sajdera - Front-End Developer</title>
 
-    <link rel="shortcut icon" href="images/shortcut_icon.webp">
-    <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="responsive.css">
+    <link rel="shortcut icon" href="images/shortcut_icon.webp" />
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="responsive.css" />
 
-    <script src="https://kit.fontawesome.com/3baf2f3ead.js" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script
+      src="https://kit.fontawesome.com/3baf2f3ead.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
+      integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-</head>
-<body>
-
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+  <body>
     <header id="mainWrapper">
-            <section class="topBar">
-                    <div class="topBar_name" data-aos="flip-left" data-aos-duration="1000">Kamil Sajdera < /> </div>
-                    <div class="topBar_menu">
-                        <span class="topBar_menu1"></span>
-                        <span class="topBar_menu2"></span>
-                        <span class="topBar_menu3"></span>
-                    </div>
+      <section class="topBar">
+        <div class="topBar_name" data-aos="flip-left" data-aos-duration="1000">
+          Kamil Sajdera < />
+        </div>
+        <div class="topBar_menu">
+          <span class="topBar_menu1"></span>
+          <span class="topBar_menu2"></span>
+          <span class="topBar_menu3"></span>
+        </div>
 
-                    <nav class="topBar_navigate">
-                        <ul>
-                            <li data-aos="fade-right" data-aos-duration="1000"><a class="active-item" href="#" data-i18n="home">Home</a></li>
-                            <li data-aos="fade-right" data-aos-duration="1000" data-aos-delay="150"><a href="#aboutMe" data-i18n="aboutMe">About Me</a></li>
-                            <li data-aos="fade-right" data-aos-duration="1000" data-aos-delay="250"><a href="#services" data-i18n="services">Services</a></li>
-                            <li data-aos="fade-right" data-aos-duration="1000" data-aos-delay="350"><a href="#myWorks"  data-i18n="portfolio">Portfolio</a></li>
-                            <li data-aos="fade-right" data-aos-duration="1000" data-aos-delay="450"><a href="#contact" data-i18n="contact">Contact</a></li>
-                        </ul>
-                    </nav>
-                    <div class="topBar_language">
-                        <button class="topBar_language_PL">PL</button> / <button class="topBar_language_EN active_lan">EN</button>
-                    </div>
-            </section>
+        <nav class="topBar_navigate">
+          <ul>
+            <li data-aos="fade-right" data-aos-duration="1000">
+              <a class="active-item" href="#" data-i18n="home">Home</a>
+            </li>
+            <li
+              data-aos="fade-right"
+              data-aos-duration="1000"
+              data-aos-delay="150"
+            >
+              <a href="#aboutMe" data-i18n="aboutMe">About Me</a>
+            </li>
+            <li
+              data-aos="fade-right"
+              data-aos-duration="1000"
+              data-aos-delay="250"
+            >
+              <a href="#services" data-i18n="services">Services</a>
+            </li>
+            <li
+              data-aos="fade-right"
+              data-aos-duration="1000"
+              data-aos-delay="350"
+            >
+              <a href="#myWorks" data-i18n="portfolio">Portfolio</a>
+            </li>
+            <li
+              data-aos="fade-right"
+              data-aos-duration="1000"
+              data-aos-delay="450"
+            >
+              <a href="#contact" data-i18n="contact">Contact</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="topBar_language">
+          <button class="topBar_language_PL">PL</button> /
+          <button class="topBar_language_EN active_lan">EN</button>
+        </div>
+      </section>
 
-
-            <section class="welcomeMessage">
-                <h1 data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="700" data-i18n="welcome">Welcome to my <span class="syntax">website</span>!</h1>
-                <p data-aos="fade-down" data-aos-delay="1200" data-i18n="welcome2"></p>
-            </section>
-            <section class="codingWrapper" data-aos="zoom-in-down" data-aos-duration="1000" data-aos-delay="2400">
-                <span class="syntax-pre">const</span> <span class="syntax">person</span> = { 
-                    <p data-aos="zoom-in-right" data-aos-delay="2550"><span class="syntax">firstName</span>: <span class="syntax-pre">"Kamil"</span>, </p>
-                    <p data-aos="zoom-in-right" data-aos-delay="2650"><span class="syntax">lastName</span>: <span class="syntax-pre">"Sajdera"</span>, </p>
-                    <p data-aos="zoom-in-right" data-aos-delay="2750"><span class="syntax">age</span>: <span class="my-age syntax-pre">20</span>, </p>
-                    <p data-aos="zoom-in-right" data-aos-delay="2850"><span class="syntax">love</span>: <span class="syntax-pre">"front-end"</span>,</p>
-                    <p data-aos="zoom-in-right" data-aos-delay="2950"><span class="syntax">fullOfMotivation</span>: <span class="syntax-pre">true</span></p>
-                };
-            </section>
-
-            
+      <section class="welcomeMessage">
+        <h1
+          data-aos="zoom-in"
+          data-aos-duration="1000"
+          data-aos-delay="700"
+          data-i18n="welcome"
+        >
+          Welcome to my <span class="syntax">website</span>!
+        </h1>
+        <p data-aos="fade-down" data-aos-delay="1200" data-i18n="welcome2"></p>
+      </section>
+      <section
+        class="codingWrapper"
+        data-aos="zoom-in-down"
+        data-aos-duration="1000"
+        data-aos-delay="2400"
+      >
+        <span class="syntax-pre">const</span>
+        <span class="syntax">person</span> = {
+        <p data-aos="zoom-in-right" data-aos-delay="2550">
+          <span class="syntax">firstName</span>:
+          <span class="syntax-pre">"Kamil"</span>,
+        </p>
+        <p data-aos="zoom-in-right" data-aos-delay="2650">
+          <span class="syntax">lastName</span>:
+          <span class="syntax-pre">"Sajdera"</span>,
+        </p>
+        <p data-aos="zoom-in-right" data-aos-delay="2750">
+          <span class="syntax">age</span>:
+          <span class="my-age syntax-pre">20</span>,
+        </p>
+        <p data-aos="zoom-in-right" data-aos-delay="2850">
+          <span class="syntax">love</span>:
+          <span class="syntax-pre">"front-end"</span>,
+        </p>
+        <p data-aos="zoom-in-right" data-aos-delay="2950">
+          <span class="syntax">fullOfMotivation</span>:
+          <span class="syntax-pre">true</span>
+        </p>
+        };
+      </section>
     </header>
 
     <main class="aboutMe" id="aboutMe">
+      <section class="aboutMe_wrapper">
+        <h1 class="sectionTitle" data-i18n="aboutMe">About me</h1>
+        <div class="aboutMe_img">
+          <img src="images/me.jpg" alt="me" />
+        </div>
+        <div
+          class="aboutMe_description"
+          data-aos="flip-up"
+          data-aos-duration="1000"
+          data-i18n="aboutText"
+        >
+          Hi! I'm Kamil Sajdera, a young front-end developer who doesn’t just
+          write code – I understand why I write it. I don’t have a stack of
+          certificates or a corporate background, but I do have something way
+          more valuable: pure drive, passion, and hundreds of hours of
+          self-taught coding and building real projects. I learn fast, act
+          consistently, and always focus on finding solutions – not excuses. I
+          started with C++ and game plugins because I wanted to understand how
+          things work from the inside. Then I discovered front-end development
+          and have stuck with it ever since. With a mix of analytical thinking,
+          a good eye for detail, and a creative spark, I aim to bring value to
+          every project I touch. I work independently, communicate clearly, and
+          always aim to improve. As a Junior, I ask a lot of questions because I
+          believe that properly understanding the problem is a key feature on
+          the way to achieving the best solution. Outside the screen, I play
+          drums, bass guitar, and saxophone, produce music, and hit the
+          volleyball court – because rhythm and energy matter in code and in
+          life too.
+        </div>
+      </section>
 
-            <section class="aboutMe_wrapper">
-                    
-                    <h1 class="sectionTitle" data-i18n="aboutMe">About me</h1>
-                    <div class="aboutMe_img">
-                        <img src="images/me.jpg" alt="me">
-                    </div>
-                    <div class="aboutMe_description" data-aos="flip-up" data-aos-duration="1000" data-i18n="aboutText">
-                        Hi! I'm Kamil Sajdera, a young front-end developer who doesn’t just write code – I understand why I write it.
-                        I don’t have a stack of certificates or a corporate background, but I do have something way more valuable: pure drive, passion, and hundreds of hours of self-taught coding and building real projects. I learn fast, act consistently, and always focus on finding solutions – not excuses.
-                        I started with C++ and game plugins because I wanted to understand how things work from the inside. Then I discovered front-end development and have stuck with it ever since.
-                        With a mix of analytical thinking, a good eye for detail, and a creative spark, I aim to bring value to every project I touch. I work independently, communicate clearly, and always aim to improve.
-                        As a Junior, I ask a lot of questions because I believe that properly understanding the problem is a key feature on the way to achieving the best solution. 
-                        Outside the screen, I play drums, bass guitar, and saxophone, produce music, and hit the volleyball court – because rhythm and energy matter in code and in life too.
-                    </div>
+      <section
+        class="mySkills"
+        id="services"
+        data-aos="zoom-in"
+        data-aos-duration="1000"
+      >
+        <h1 class="sectionTitle" data-i18n="services">My skilss</h1>
 
-            </section>
-            
-            <section class="mySkills" id="services" data-aos="zoom-in" data-aos-duration="1000">
+        <div id="slide-prev">
+          <img src="images/left.png" alt="arrow-left" />
+        </div>
 
-                <h1 class="sectionTitle" data-i18n="services">My skilss</h1>
+        <div id="slide-next">
+          <img src="images/right.png" alt="arrow-right" />
+        </div>
+        <div class="mySkills_itemsContainer">
+          <div class="mySkills_item">
+            <i class="fa-solid fa-smile-beam"></i>
+            <h2 data-i18n="skillsHeader1">Clean Code</h2>
+            <p data-i18n="skillsText1">
+              Writing clean code is one of the most important qualities for me.
+              I think that this is crucial in order to achieve the best possible
+              efficiency. I try to make my code readable and organized. Care for
+              the code is the basis for me!
+            </p>
+          </div>
 
-                <div id="slide-prev">
-                    <img src="images/left.png" alt="arrow-left">
-                </div>
+          <div class="mySkills_item mid">
+            <i class="fa-solid fa-code"></i>
+            <h2 data-i18n="skillsHeader2">Front-End</h2>
+            <p data-i18n="skillsText2">
+              When I coding the appearance of the website, I feel fulfilled and
+              pay maximum attention to it's implementation. Writing web
+              applications isn't a problem for me. Thanks to my experience, I'm
+              not afraid of challenges and take on more and more difficult
+              tasks.
+            </p>
+          </div>
 
-                <div id="slide-next">
-                    <img src="images/right.png" alt="arrow-right">
-                </div>
-                    <div class="mySkills_itemsContainer">
+          <div class="mySkills_item">
+            <i class="fa-solid fa-mobile-screen"></i>
+            <h2 data-i18n="skillsHeader3">RWD</h2>
+            <p data-i18n="skillsText3">
+              I use the "mobile-first" method, but I can also code the other way
+              around. Most people use mobile devices. This makes me take care of
+              every detail to adapt my website to each device. Whether it's a
+              phone, tablet or computer, my site is always up to date.
+            </p>
+          </div>
 
-                            <div class="mySkills_item">
-                                <i class="fa-solid fa-smile-beam"></i>
-                                <h2 data-i18n="skillsHeader1">Clean Code</h2>
-                                <p data-i18n="skillsText1">
-                                    Writing clean code is one of the most important qualities for me. I think that this is crucial in order to achieve the best possible efficiency. 
-                                    I try to make my code readable and organized. Care for the code is the basis for me!
-                                </p>
-                            </div>
+          <div class="mySkills_item">
+            <i class="fa-solid fa-gears"></i>
+            <h2 data-i18n="skillsHeader4">CMS/SQL</h2>
+            <p data-i18n="skillsText4">
+              For 3 years I worked as a website administrator on the IPS 4.x
+              engine. I took care of the proper functioning and security of the
+              website, introducing modifications and implementing user
+              suggestions. I worked with databases and was fluent in MySQL using
+              queries.
+            </p>
+          </div>
 
-                            <div class="mySkills_item mid">
-                                <i class="fa-solid fa-code"></i>
-                                <h2 data-i18n="skillsHeader2">Front-End</h2>
-                                <p data-i18n="skillsText2">
-                                    When I coding the appearance of the website, I feel fulfilled and pay maximum attention to it's implementation.
-                                    Writing web applications isn't a problem for me. Thanks to my experience, I'm not afraid of challenges and take on more and more difficult tasks.
-                                </p>
-                            </div>
+          <div class="mySkills_item">
+            <i class="fa-solid fa-users"></i>
+            <h2 data-i18n="skillsHeader5">Git/Teamwork</h2>
+            <p data-i18n="skillsText5">
+              Collaboration is key. I thrive in development teams, I use GIT, I
+              value clear commits, communication, and joint problem solving.
+            </p>
+          </div>
 
-                            <div class="mySkills_item">
-                                <i class="fa-solid fa-mobile-screen"></i>
-                                <h2 data-i18n="skillsHeader3">RWD</h2>
-                                <p data-i18n="skillsText3">
-                                    I use the "mobile-first" method, but I can also code the other way around. Most people use mobile devices. 
-                                    This makes me take care of every detail to adapt my website to each device. Whether it's a phone, tablet or computer, my site is always up to date.
-                                </p>
-                            </div>
+          <div class="mySkills_item">
+            <i class="fa-solid fa-paintbrush"></i>
+            <h2 data-i18n="skillsHeader6">Visual eye</h2>
+            <p data-i18n="skillsText6">
+              Collaboration is key. I thrive in development teams, I use GIT, I
+              value clear commits, communication, and joint problem solving.
+            </p>
+          </div>
+        </div>
+      </section>
 
-                            <div class="mySkills_item">
-                                <i class="fa-solid fa-gears"></i>
-                                <h2 data-i18n="skillsHeader4">CMS/SQL</h2>
-                                <p data-i18n="skillsText4">
-                                    For 3 years I worked as a website administrator on the IPS 4.x engine. I took care of the proper functioning and security of the website, introducing modifications and implementing user suggestions.
-                                    I worked with databases and was fluent in MySQL using queries.
+      <section class="skillSet">
+        <div class="chartWrapper">
+          <ul class="chartWrapper_labels">
+            <li>Expert</li>
+            <li>High</li>
+            <li>Mid</li>
+            <li>Newbie</li>
+          </ul>
 
-                                </p>
-                            </div>
-
-                            <div class="mySkills_item">
-                                <i class="fa-solid fa-users"></i>
-                                <h2 data-i18n="skillsHeader5">Git/Teamwork</h2>
-                                <p data-i18n="skillsText5">
-                                   Collaboration is key. I thrive in development teams, I use GIT, I value clear commits, communication, and joint problem solving.
-                                </p>
-                            </div>
-
-                            <div class="mySkills_item">
-                                <i class="fa-solid fa-paintbrush"></i>
-                                <h2 data-i18n="skillsHeader6">Visual eye</h2>
-                                <p data-i18n="skillsText6">
-                                   Collaboration is key. I thrive in development teams, I use GIT, I value clear commits, communication, and joint problem solving.
-                                </p>
-                            </div>
-
-                        </div>
-            </section>
-
-            <section class="skillSet">
-
-            <div class="chartWrapper">
-
-                    <ul class="chartWrapper_labels">
-                        <li>Expert</li>
-                        <li>High</li>
-                        <li>Mid</li>
-                        <li>Newbie</li>
-                    </ul>
-
-                    <div class="chartWrapper_bars">
-                        <div class="chartWrapper_bars__item" data-desc="0">
-                            <div class="chartWrapper_bars_name">HTML & CSS</div>
-                        </div>
-
-                        <div class="chartWrapper_bars__item" data-desc="1"> 
-                            <div class="chartWrapper_bars_name">JS/TScript</div>
-                        </div>
-
-                        <div class="chartWrapper_bars__item" data-desc="2">
-                            <div class="chartWrapper_bars_name">React</div>
-                        </div>
-
-                        <div class="chartWrapper_bars__item" data-desc="3">
-                            <div class="chartWrapper_bars_name">Next JS</div>
-                        </div>
-                    </div>
+          <div class="chartWrapper_bars">
+            <div class="chartWrapper_bars__item" data-desc="0">
+              <div class="chartWrapper_bars_name">HTML & CSS</div>
             </div>
 
-            <div class="skillSet__description" data-aos="fade-in" data-aos-duration="500" data-aos-delay="500">
-                <h2>HTML & CSS</h2>
-                <p>I can design website structures using <b>semantic HTML elements</b>, which not only improves the readability of the code, but also has a positive effect on the website's accessibility and positioning in search results. I have experience in creating HTML forms using various field types and handling client-side validation using HTML5 attributes such as <i>required</i> and <i>pattern</i>. <br /> <br />
-                    I can use a variety of CSS selectors, including class and ID selectors, as well as pseudo-classes and pseudo-elements, to precisely style elements on a page. I have deep knowledge of <b>flexbox</b> and <b>grid layout</b>, which allows me to design flexible and responsive website layouts that scale perfectly on various devices. I have experience in working with CSS preprocessors such as <b>SASS</b> and <b>LESS</b>, which allows me to more conveniently manage style using variables, mixins and functions.</p>
+            <div class="chartWrapper_bars__item" data-desc="1">
+              <div class="chartWrapper_bars_name">JS/TScript</div>
             </div>
 
-    </section>
+            <div class="chartWrapper_bars__item" data-desc="2">
+              <div class="chartWrapper_bars_name">React</div>
+            </div>
+
+            <div class="chartWrapper_bars__item" data-desc="3">
+              <div class="chartWrapper_bars_name">Next JS</div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="skillSet__description"
+          data-aos="fade-in"
+          data-aos-duration="500"
+          data-aos-delay="500"
+        >
+          <h2>HTML & CSS</h2>
+          <p>
+            I can design website structures using <b>semantic HTML elements</b>,
+            which not only improves the readability of the code, but also has a
+            positive effect on the website's accessibility and positioning in
+            search results. I have experience in creating HTML forms using
+            various field types and handling client-side validation using HTML5
+            attributes such as <i>required</i> and <i>pattern</i>. <br />
+            <br />
+            I can use a variety of CSS selectors, including class and ID
+            selectors, as well as pseudo-classes and pseudo-elements, to
+            precisely style elements on a page. I have deep knowledge of
+            <b>flexbox</b> and <b>grid layout</b>, which allows me to design
+            flexible and responsive website layouts that scale perfectly on
+            various devices. I have experience in working with CSS preprocessors
+            such as <b>SASS</b> and <b>LESS</b>, which allows me to more
+            conveniently manage style using variables, mixins and functions.
+          </p>
+        </div>
+      </section>
     </main>
 
     <section class="myWorks" id="myWorks">
-        <h1 class="sectionTitle" data-i18n="portfolio">My works</h1>
+      <h1 class="sectionTitle" data-i18n="portfolio">My works</h1>
 
-        <div class="myWorks_item" data-aos="fade-down" data-aos-duration="1000">
-            <img src="images/nextorganizer.png" alt="Organizer">
-            <div class="myWorks_item__title">Organizer</div>
-            <div class="myWorks_item__overlay">
-                <p class="myWorks_item__overlay_text">
-                    <span data-i18n="projectText1">A project simulating an "organizer" thanks to which you keep your events, expenses and to-dos in one place. </span>
-                    <b>Next.js (API routes), mongodb, user auth (JWT), cloudinary, SCCS modules, form actions</b>
-                </p>
-                <a href="https://github.com/KamilSajdera/organizer" target="_blank">
-                    <button class="myWorks_item__overlay_code">Code</button>
-                </a>
+      <div class="myWorks_item" data-aos="fade-down" data-aos-duration="1000">
+        <img src="images/nextorganizer.png" alt="Organizer" />
+        <div class="myWorks_item__title">Organizer</div>
+        <div class="myWorks_item__overlay">
+          <p class="myWorks_item__overlay_text">
+            <span data-i18n="projectText1"
+              >A project simulating an "organizer" thanks to which you keep your
+              events, expenses and to-dos in one place.
+            </span>
+            <b
+              >Next.js (API routes), mongodb, user auth (JWT), cloudinary, SCCS
+              modules, form actions</b
+            >
+          </p>
+          <a href="https://github.com/KamilSajdera/organizer" target="_blank">
+            <button class="myWorks_item__overlay_code">Code</button>
+          </a>
 
-                <a href="https://organizer-wine.vercel.app" target="_blank">
-                    <button class="myWorks_item__overlay_demo">Demo</button>
-                </a>
-            </div>
+          <a href="https://organizer-wine.vercel.app" target="_blank">
+            <button class="myWorks_item__overlay_demo">Demo</button>
+          </a>
         </div>
+      </div>
 
-        <div class="myWorks_item" data-aos="fade-right" data-aos-duration="1000">
-                <img src="images/notesgenerator.png" alt="Sheet Music Generator">
-                <div class="myWorks_item__title">Sheet Music Generator</div>
+      <div class="myWorks_item" data-aos="fade-right" data-aos-duration="1000">
+        <img src="images/notesgenerator.png" alt="Sheet Music Generator" />
+        <div class="myWorks_item__title">Sheet Music Generator</div>
 
-                <div class="myWorks_item__overlay">
-                    <p class="myWorks_item__overlay_text">
-                        <span data-i18n="projectText2">A tool for creating sheet music ready for printing, with the ability to listen to the written melody line at any tempo. </span>
-                        <b>React, createContext, useCallback, useMemo, custom hook, react-hook-form, react-to-print</b>
-                    </p>
+        <div class="myWorks_item__overlay">
+          <p class="myWorks_item__overlay_text">
+            <span data-i18n="projectText2"
+              >A tool for creating sheet music ready for printing, with the
+              ability to listen to the written melody line at any tempo.
+            </span>
+            <b
+              >React, createContext, useCallback, useMemo, custom hook,
+              react-hook-form, react-to-print</b
+            >
+          </p>
 
-                    <a href="https://github.com/KamilSajdera/Notes-Generator" target="_blank">
-                        <button class="myWorks_item__overlay_code">Code</button>
-                    </a>
+          <a
+            href="https://github.com/KamilSajdera/Notes-Generator"
+            target="_blank"
+          >
+            <button class="myWorks_item__overlay_code">Code</button>
+          </a>
 
-                    <a href="https://kamilsajdera.github.io/Notes-Generator/" target="_blank">
-                        <button class="myWorks_item__overlay_demo">Demo</button>
-                    </a>
-                </div>
+          <a
+            href="https://kamilsajdera.github.io/Notes-Generator/"
+            target="_blank"
+          >
+            <button class="myWorks_item__overlay_demo">Demo</button>
+          </a>
         </div>
+      </div>
 
-        <div class="myWorks_item" data-aos="fade-right" data-aos-duration="1000">
-            <img src="images/foodApp.png" alt="Food Order App">
-            <div class="myWorks_item__title">Food Order App</div>
-            <div class="myWorks_item__overlay">
-                <p class="myWorks_item__overlay_text"> 
-                    <span data-i18n="projectText3">The fast food restaurant app has a variety of customizable items to eat, sizes or toppings for each one.</span>
-                    <b>React, Redux Toolkit, useMemo, custom hook </b>
-                </p>
-                <a href="https://github.com/KamilSajdera/Food-Order-App" target="_blank">
-                    <button class="myWorks_item__overlay_code">Code</button>
-                </a>
+      <div class="myWorks_item" data-aos="fade-right" data-aos-duration="1000">
+        <img src="images/foodApp.png" alt="Food Order App" />
+        <div class="myWorks_item__title">Food Order App</div>
+        <div class="myWorks_item__overlay">
+          <p class="myWorks_item__overlay_text">
+            <span data-i18n="projectText3"
+              >The fast food restaurant app has a variety of customizable items
+              to eat, sizes or toppings for each one.</span
+            >
+            <b>React, Redux Toolkit, useMemo, custom hook </b>
+          </p>
+          <a
+            href="https://github.com/KamilSajdera/Food-Order-App"
+            target="_blank"
+          >
+            <button class="myWorks_item__overlay_code">Code</button>
+          </a>
 
-                <a href="https://fast-foodapp.netlify.app/" target="_blank">
-                    <button class="myWorks_item__overlay_demo">Demo</button>
-                </a>
-            </div>
+          <a href="https://fast-foodapp.netlify.app/" target="_blank">
+            <button class="myWorks_item__overlay_demo">Demo</button>
+          </a>
         </div>
+      </div>
 
-        <div class="myWorks_item" data-aos="fade-right" data-aos-duration="1000">
-            <img src="images/moviesworld.png" alt="Movies World">
-            <div class="myWorks_item__title">Movies World</div>
-            <div class="myWorks_item__overlay">
-                <p class="myWorks_item__overlay_text"> 
-                    <span data-i18n="projectText4">Search, find and discover interesting movies, tv series and people related to cinema. Thanks to a clear interface, move very smoothly into page. You can check a lot of details. Data is fetching from an external API and prepared appropriately.</span>
-                    <b>React, router, useLoaderData, react-player </b>
-                </p>
-                <a href="https://github.com/KamilSajdera/movies-world" target="_blank">
-                    <button class="myWorks_item__overlay_code">Code</button>
-                </a>
+      <div class="myWorks_item" data-aos="fade-right" data-aos-duration="1000">
+        <img src="images/moviesworld.png" alt="Movies World" />
+        <div class="myWorks_item__title">Movies World</div>
+        <div class="myWorks_item__overlay">
+          <p class="myWorks_item__overlay_text">
+            <span data-i18n="projectText4"
+              >Search, find and discover interesting movies, tv series and
+              people related to cinema. Thanks to a clear interface, move very
+              smoothly into page. You can check a lot of details. Data is
+              fetching from an external API and prepared appropriately.</span
+            >
+            <b>React, router, useLoaderData, react-player </b>
+          </p>
+          <a
+            href="https://github.com/KamilSajdera/movies-world"
+            target="_blank"
+          >
+            <button class="myWorks_item__overlay_code">Code</button>
+          </a>
 
-                <a href="https://saydi-movies-world.netlify.app" target="_blank">
-                    <button class="myWorks_item__overlay_demo">Demo</button>
-                </a>
-            </div>
+          <a href="https://saydi-movies-world.netlify.app" target="_blank">
+            <button class="myWorks_item__overlay_demo">Demo</button>
+          </a>
         </div>
-        
-        <div class="myWorks_item" data-aos="fade-down" data-aos-duration="1000">
-            <img src="images/weatherapp.png" alt="Weather App">
-            <div class="myWorks_item__title">Weather App</div>
-            <div class="myWorks_item__overlay">
-                <p class="myWorks_item__overlay_text"> 
-                    <span data-i18n="projectText5">Weather app is an application that will allow you to check the weather and its parameters. </span>
-                    <b>vanlla JS</b>
-                </p>
-                <a href="https://github.com/KamilSajdera/weather-app" target="_blank">
-                    <button class="myWorks_item__overlay_code">Code</button>
-                </a>
+      </div>
 
-                <a href="https://kamilsajdera.github.io/weather-app/" target="_blank">
-                    <button class="myWorks_item__overlay_demo">Demo</button>
-                </a>
-            </div>
+      <div class="myWorks_item" data-aos="fade-down" data-aos-duration="1000">
+        <img src="images/weatherapp.png" alt="Weather App" />
+        <div class="myWorks_item__title">Weather App</div>
+        <div class="myWorks_item__overlay">
+          <p class="myWorks_item__overlay_text">
+            <span data-i18n="projectText5"
+              >Weather app is an application that will allow you to check the
+              weather and its parameters.
+            </span>
+            <b>vanlla JS</b>
+          </p>
+          <a href="https://github.com/KamilSajdera/weather-app" target="_blank">
+            <button class="myWorks_item__overlay_code">Code</button>
+          </a>
+
+          <a href="https://kamilsajdera.github.io/weather-app/" target="_blank">
+            <button class="myWorks_item__overlay_demo">Demo</button>
+          </a>
         </div>
+      </div>
 
-        <div class="myWorks_item" data-aos="fade-down" data-aos-duration="1000">
-                <img src="images/memorygame.png" alt="Memory Game">
-                <div class="myWorks_item__title">Memory Game</div>
-                <div class="myWorks_item__overlay">
-                    <p class="myWorks_item__overlay_text" data-i18n="projectText6">  
-                        <b>jQuery</b>
-                    </p>
-                    <a href="https://github.com/KamilSajdera/memory-game" target="_blank">
-                        <button class="myWorks_item__overlay_code">Code</button>
-                    </a>
+      <div class="myWorks_item" data-aos="fade-down" data-aos-duration="1000">
+        <img src="images/memorygame.png" alt="Memory Game" />
+        <div class="myWorks_item__title">Memory Game</div>
+        <div class="myWorks_item__overlay">
+          <p class="myWorks_item__overlay_text" data-i18n="projectText6">
+            <b>jQuery</b>
+          </p>
+          <a href="https://github.com/KamilSajdera/memory-game" target="_blank">
+            <button class="myWorks_item__overlay_code">Code</button>
+          </a>
 
-                    <a href="https://kamilsajdera.github.io/memory-game/" target="_blank">
-                        <button class="myWorks_item__overlay_demo">Demo</button>
-                    </a>
-                </div>
+          <a href="https://kamilsajdera.github.io/memory-game/" target="_blank">
+            <button class="myWorks_item__overlay_demo">Demo</button>
+          </a>
         </div>
-
+      </div>
     </section>
 
     <footer class="footer" id="contact">
+      <h1 class="sectionTitle" data-i18n="contact">Contact</h1>
 
-        <h1 class="sectionTitle" data-i18n="contact">Contact</h1>
+      <form
+        action="https://formspree.io/f/xayzalnj"
+        method="POST"
+        class="contact_form"
+      >
+        <div
+          class="contact_form__input"
+          data-aos="fade-down"
+          data-aos-duration="1000"
+          data-aos-delay="350"
+        >
+          <input type="text" class="contact_form__usermail" name="user_mail" />
+          <label class="place_holder" for="contact_form__usermail">Mail</label>
+        </div>
 
-            <form action="https://formspree.io/f/xayzalnj" method="POST" class="contact_form">
-                    <div class="contact_form__input" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="350">
-                        <input type="text" class="contact_form__usermail" name="user_mail">
-                        <label class="place_holder" for="contact_form__usermail">Mail</span>
-                    </div>
+        <div
+          class="contact_form__input"
+          data-aos="fade-down"
+          data-aos-duration="1000"
+          data-aos-delay="550"
+        >
+          <input type="text" class="contact_form__topic" name="user_topic" />
+          <label
+            class="place_holder"
+            for="contact_form__topic"
+            data-i18n="contactTopic"
+            >Topic</label
+          >
+        </div>
 
-                    <div class="contact_form__input" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="550" >
-                        <input type="text" class="contact_form__topic" name="user_topic">
-                        <label class="place_holder" for="contact_form__topic" data-i18n="contactTopic">Topic</span>
-                    </div>
+        <div
+          class="contact_form__input"
+          data-aos="fade-down"
+          data-aos-duration="1000"
+          data-aos-delay="750"
+        >
+          <textarea class="contact_form__textarea" name="user_msg"></textarea>
+          <label
+            class="place_holder"
+            for="contact_form__textarea"
+            data-i18n="contactMsg"
+            >Message</label
+          >
+        </div>
 
-                    <div class="contact_form__input" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="750">
-                        <textarea class="contact_form__textarea" name="user_msg"></textarea>
-                        <label class="place_holder" for="contact_form__textarea" data-i18n="contactMsg">Message</span>
-                    </div>
+        <button
+          type="submit"
+          class="contact_form__submit"
+          onclick="handle()"
+          data-aos="fade-down"
+          data-aos-duration="1000"
+          data-aos-delay="950"
+          data-i18n="contactBtn"
+        >
+          Send
+        </button>
+      </form>
 
-                    <button type="submit" class="contact_form__submit" onclick="handle()" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="950" data-i18n="contactBtn">Send</button>
-            </form>
-            
+      <div class="socials">
+        <div class="socials_item" data-aos="zoom-in-left">
+          <i class="fa fa-envelope" aria-hidden="true"></i>
+          <a href="mailto:kamilsajdera@gmail.com">kamilsajdera@gmail.com</a>
+        </div>
 
-            <div class="socials">
-                    <div class="socials_item" data-aos="zoom-in-left">
-                        <i class="fa fa-envelope" aria-hidden="true"></i> <a href="mailto:kamilsajdera@gmail.com">kamilsajdera@gmail.com</a>
-                    </div>
+        <div class="socials_item" data-aos="zoom-in-left">
+          <i class="fa-brands fa-github"></i>
+          <a href="https://github.com/KamilSajdera" target="_blank"
+            >github.com/KamilSajdera</a
+          >
+        </div>
 
-                    <div class="socials_item" data-aos="zoom-in-left">
-                        <i class="fa-brands fa-github"></i> <a href="https://github.com/KamilSajdera" target="_blank">github.com/KamilSajdera</a>
-                    </div>
-
-                    <div class="socials_item" data-aos="zoom-in-left">
-                        <i class="fa fa-linkedin" aria-hidden="true"></i> <a href="https://www.linkedin.com/in/kamil-sajdera-6929b6206/" target="_blank">linkedin.com/in/kamil-sajdera</a>
-                    </div>
-            </div>
-
-            
+        <div class="socials_item" data-aos="zoom-in-left">
+          <i class="fa fa-linkedin" aria-hidden="true"></i>
+          <a
+            href="https://www.linkedin.com/in/kamil-sajdera-6929b6206/"
+            target="_blank"
+            >linkedin.com/in/kamil-sajdera</a
+          >
+        </div>
+      </div>
     </footer>
-    <div class="copyright">Copyright &copy; Kamil Sajdera | <span data-i18n="footerCopyright">Design & Code</span>: Kamil Sajdera</div>
-    
-<script src="main.js"></script>
-</body>
+    <div class="copyright">
+      Copyright &copy; Kamil Sajdera |
+      <span data-i18n="footerCopyright">Design & Code</span>: Kamil Sajdera
+    </div>
+
+    <script src="main.js"></script>
+  </body>
 </html>
