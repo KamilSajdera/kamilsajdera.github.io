@@ -291,6 +291,7 @@ body {
 .mySkills {
   overflow: hidden;
   position: relative;
+  margin-bottom: 50px;
 }
 .mySkills_itemsContainer {
   width: 100%;

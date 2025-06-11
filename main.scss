@@ -335,7 +335,8 @@ body {
 .mySkills {
   overflow: hidden;
   position: relative;
-
+  margin-bottom: 50px;
+  
   &_itemsContainer {
     width: 100%;
     white-space: nowrap;
