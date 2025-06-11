@@ -60,9 +60,10 @@ window.translations = {
           I can use a variety of CSS selectors, including class and ID selectors, as well as pseudo-classes and pseudo-elements, to precisely style elements on a page. I have deep knowledge of <b>flexbox</b> and <b>grid layout</b>, which allows me to design flexible and responsive website layouts that scale perfectly on various devices. I have experience in working with CSS preprocessors such as <b>SASS</b> and <b>LESS</b>, which allows me to more conveniently manage style using variables, mixins and functions.`,
     },
     {
-      title: "JavaScript",
+      title: "JavaScript & TypeScript",
       description: `I am skilled in manipulating the DOM tree using JavaScript, which allows me to dynamically add, remove and modify elements on the page depending on user actions. I am familiar with <b>asynchrony concepts</b> in JavaScript such as <i>Callbacks</i>, <i>Promises</i> and <i>Async/Await</i>, which allows me to handle operations that require time-consuming data downloading from external sources (API). I know concepts such as primitive/complex types, event loop, destructuring, spread operator and scope. <br /> <br />
-          I have also made several projects in jQuery, so I can confidently say that it is not a problem for me. I can animate jQuery applications with smooth transitions, size changes, and the appearance of elements, which results in a more attractive website. I can use various events and respond to user interactions in an efficient and clear way. I can integrate and customize jQuery plugins, using ready-made solutions available in this library's ecosystem.`,
+          I can write typed components, functions, and hooks. I understand the differences between types and interfaces and know how to choose the right approach depending on the context. I type component props, hooks, asynchronous functions, and API data, which helps me catch errors early and write more predictable code. I can work with generic types and know how to define custom types for external data or libraries.
+          I use TypeScript together with React and Next.js, which makes it easier to work on larger projects and improves team collaboration`,
     },
     {
       title: "React",
