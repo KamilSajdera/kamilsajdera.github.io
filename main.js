@@ -141,7 +141,7 @@ $(window).on("scroll", function () {
             .eq(2)
             .css("height", bar_height + "%");
 
-        if (bar_height <= 25)
+        if (bar_height <= 45)
           $(".chartWrapper_bars__item")
             .eq(3)
             .css("height", bar_height + "%");
