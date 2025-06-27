@@ -177,39 +177,38 @@ body {
     top: 30%;
     right: 65px;
 
-    &_PL, 
-    &_EN
-    {
-        padding: 0 3px;
-        font-size: 0.9em;
-        cursor: pointer;
-        position: relative;
-        border: none;
-        outline: none;
-        background: transparent;
-        color: #fff;
-        font-family: $page-font;
-        transition: all 150ms ease-in-out;
+    &_PL,
+    &_EN {
+      padding: 0 3px;
+      font-size: 0.9em;
+      cursor: pointer;
+      position: relative;
+      border: none;
+      outline: none;
+      background: transparent;
+      color: #fff;
+      font-family: $page-font;
+      transition: all 150ms ease-in-out;
 
-        &.active_lan {
-            color: #7ec6ff;
-            text-shadow: 0px 0px 5px #7ec6ff;
-        }
+      &.active_lan {
+        color: #7ec6ff;
+        text-shadow: 0px 0px 5px #7ec6ff;
+      }
     }
 
     &_PL.active_lan::after,
     &_EN.active_lan::after {
-        content: '';
-        display: block;
-        position: absolute;
-        bottom: -8px;
-        left: 50%;
-        transform: translateX(-50%);
-        background: #7ec6ff;
-        width: 6px;
-        height: 6px;
-        border-radius: 50%;
-        transition: all 150ms ease-in-out;
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: -8px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #7ec6ff;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      transition: all 150ms ease-in-out;
     }
   }
 }
@@ -336,7 +335,7 @@ body {
   overflow: hidden;
   position: relative;
   margin-bottom: 50px;
-  
+
   &_itemsContainer {
     width: 100%;
     white-space: nowrap;
@@ -416,11 +415,122 @@ body {
   height: 55px !important;
 }
 
+header.am {
+}
+
 .myWorks {
   width: 100%;
   background: #121212;
   padding: 40px 20px;
-  @include setFlex(row, space-between);
+  @include setFlex(row, space-between, flex-start);
+
+  &_mainData {
+    width: 60%;
+    margin-top: -20px;
+
+    header {
+      width: 100%;
+      padding-bottom: 10px;
+      @include setFlex(row, space-between);
+      border-bottom: 1px solid #272727;
+
+      h3 {
+        padding: 5px 12px;
+        background: #1341b6;
+        display: inline-block;
+        font-size: 1.45em;
+        border-radius: 5px;
+      }
+
+      .sites {
+        .site {
+          @include setFlex(row, center);
+          gap: 10px;
+
+          a {
+            color: #dbdbdb;
+            text-decoration: none;
+            transition: 0.2s ease-in-out;
+
+            &:hover {
+              color: #a681f0;
+            }
+          }
+
+          img {
+            width: 42px;
+          }
+
+          .git {
+            filter: invert(0.9);
+            width: 35px;
+          }
+        }
+      }
+    }
+
+    main {
+      @include setFlex(row, space-around, flex-start);
+      margin-top: 20px;
+
+      .arrow-left img,
+      .arrow-right img {
+        width: 65px;
+        margin-bottom: 15px;
+        cursor: pointer;
+        z-index: 10;
+        position: relative;
+      }
+
+      .project-preview {
+        position: relative;
+        width: 800px;
+        height: auto;
+        overflow-y: clip;
+
+        .image-before,
+        .image-after,
+        .image-center {
+          position: absolute;
+          top: 0;
+          left: 0;
+          transition: all 0.3s ease;
+        }
+
+        .image-before {
+          transform: translateY(5px) translateX(-80px) rotate(355deg);
+          opacity: 0.6;
+          z-index: 1;
+        }
+
+        .image-after {
+          transform: translateY(5px) translateX(80px) rotate(5deg);
+          opacity: 0.6;
+          z-index: 1;
+        }
+
+        .image-center {
+          z-index: 2;
+          position: relative;
+          transform: scale(1);
+        }
+
+        img {
+          width: 100%;
+          border-radius: 8px;
+          box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+        }
+      }
+    }
+  }
+
+  &_description {
+    margin-top: -20px;
+    width: 35%;
+    font-size: 1.25em;
+    font-weight: 500;
+    z-index: 3;
+  }
 
   &_item {
     width: 85%;
