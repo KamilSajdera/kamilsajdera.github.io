@@ -467,11 +467,12 @@ body {
     }
 
     main {
-      @include setFlex(row, space-around, flex-start);
+      @include setFlex(row, center, flex-start);
       margin-top: 20px;
 
       .arrow-left img,
       .arrow-right img {
+        margin-inline: 20px;
         width: 65px;
         margin-bottom: 15px;
         cursor: pointer;
@@ -530,7 +531,7 @@ body {
 
   &_description {
     margin-top: -20px;
-    width: 33%;
+    width: 30%;
     font-size: 1.75em;
     font-weight: 500;
     z-index: 3;
