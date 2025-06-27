@@ -271,3 +271,13 @@ function setLanguage(lang) {
       console.error("Error -> Failed to fetch lang file!");
     });
 }
+
+const projectLeftSide = $(".myWorks_mainData")[0];
+const projectRightSide = $(".myWorks_description")[0];
+
+let projectsDescFontSize = 1.75;
+
+while(projectRightSide.clientHeight > projectLeftSide.clientHeight) {
+  projectRightSide.style.fontSize = `${projectsDescFontSize}em`;
+  projectsDescFontSize -= 0.05;
+}
