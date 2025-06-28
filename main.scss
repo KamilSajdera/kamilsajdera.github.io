@@ -441,9 +441,10 @@ body {
 
       .sites {
         .site {
-          @include setFlex(row, center);
+          @include setFlex(row, flex-start);
           gap: 10px;
 
+          
           a {
             color: #dbdbdb;
             text-decoration: none;
@@ -460,7 +461,6 @@ body {
 
           .git {
             filter: invert(0.9);
-            width: 35px;
           }
         }
       }
@@ -482,7 +482,7 @@ body {
 
       .project-preview {
         position: relative;
-        width: 800px;
+        width: 95%;
         height: auto;
         overflow-y: clip;
 
