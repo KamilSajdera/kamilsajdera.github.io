@@ -277,7 +277,9 @@ const projectRightSide = $(".myWorks_description")[0];
 
 let projectsDescFontSize = 1.75;
 
-while(projectRightSide.clientHeight > projectLeftSide.clientHeight) {
-  projectRightSide.style.fontSize = `${projectsDescFontSize}em`;
-  projectsDescFontSize -= 0.05;
-}
+$(document).ready(function () {
+  while (projectRightSide.clientHeight > projectLeftSide.clientHeight) {
+    projectRightSide.style.fontSize = `${projectsDescFontSize}em`;
+    projectsDescFontSize -= 0.05;
+  }
+});
