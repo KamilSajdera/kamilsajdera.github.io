@@ -283,3 +283,45 @@ $(document).ready(function () {
     projectsDescFontSize -= 0.05;
   }
 });
+
+const projectGoNext = $(".myWorks_mainData main .arrow-right");
+const projectGoPrev = $(".myWorks_mainData main .arrow-left");
+const projectsContainer = $(".myWorks_mainData .project-preview");
+const projectBeforeImage = $(
+  ".myWorks_mainData .project-preview .image-before"
+);
+const projectCenterImage = $(
+  ".myWorks_mainData .project-preview .image-center"
+);
+const projectAfterImage = $(".myWorks_mainData .project-preview .image-after");
+
+projectGoNext.click(() => {
+  projectsContainer.addClass("carousel-next");
+
+  let storedBeforeImage = projectBeforeImage.find("img")[0].src;
+  let storedCenterImage = projectCenterImage.find("img")[0].src;
+  let storedAfterImage = projectAfterImage.find("img")[0].src;
+
+  setTimeout(() => {
+    projectsContainer.removeClass("carousel-next");
+    projectBeforeImage.find("img")[0].src = storedAfterImage;
+    projectCenterImage.find("img")[0].src = storedBeforeImage;
+    projectAfterImage.find("img")[0].src = storedCenterImage;
+  }, 600);
+});
+
+projectGoPrev.click(() => {
+  projectsContainer.addClass("carousel-prev");
+
+  let storedBeforeImage = projectBeforeImage.find("img")[0].src;
+  let storedCenterImage = projectCenterImage.find("img")[0].src;
+  let storedAfterImage = projectAfterImage.find("img")[0].src;
+
+  setTimeout(() => {
+    projectsContainer.removeClass("carousel-prev");
+    projectBeforeImage.find("img")[0].src = storedCenterImage;
+    projectCenterImage.find("img")[0].src = storedAfterImage;
+    projectAfterImage.find("img")[0].src = storedBeforeImage;
+  }, 600);
+});
+
