@@ -26,17 +26,45 @@ window.translations = {
     "Współpraca to podstawa. Świetnie odnajduję się w zespołach developerskich, korzystam z <b>GIT</b>'a, przykładam wagę do czytelnych commitów, komunikacji i wspólnego rozwiązywania problemów.",
   skillsText6:
     "Mam wyczucie estetyki i detali. Potrafię dopracować interfejs tak, aby był nie tylko funkcjonalny, ale też przyjemny dla oka. Zwracam uwagę na spacing, kolory, typografię i hierarchię wizualną.",
-  projectText1:
-    "Projekt symulujący „organizer”, dzięki któremu wszystkie wydarzenia, wydatki i zadania będziesz mieć w jednym miejscu.",
-  projectText2:
-    "Narzędzie do tworzenia zapisu nutowego (linii melodycznej), z bogatym wyborem narzędzi określających szczegóły tego zapisu. Możliwość odsłuchania dźwięk po dźwięku w dowolnym tempie stworzonego zapisu.",
-  projectText3:
-    "Aplikacja dla restauracji typu fast food umożliwiająca personalizację dań z różnych kategorii, rozmiarów czy doborze dodatków.",
-  projectText4:
-    "Szukaj, znajduj i odkrywaj interesujące filmy, seriale telewizyjne i osoby związane z kinematografią. Dzięki przejrzystemu interfejsowi poruszasz się bardzo płynnie po stronie. Możesz sprawdzić wiele szczegółów. Dane są pobierane z zewnętrznego API i odpowiednio przygotowywane.",
-  projectText5:
-    "Aplikacja pogodowa to aplikacja, dzięki której sprawdzisz pogodę i jej parametry dla dowolnego miejsca na świecie.",
-  projectText6: "",
+  projectDesc1:
+        `Organizer to pełnoprawna aplikacja webowa służąca do zarządzania
+        codziennymi zadaniami, wydarzeniami i wydatkami w jednym miejscu.
+        Użytkownicy mogą tworzyć konto, logować się i zarządzać swoimi danymi
+        dzięki autoryzacji opartej na <b>JSON Web Tokens (JWT)</b>. Backend
+        został zbudowany z wykorzystaniem <b>Next.js API Routes</b>, a
+        zaszyfrowane dane przechowywane są w <b>MongoDB</b>. Aplikacja umożliwia
+        dodawanie, edycję i usuwanie wydarzeń, zadań oraz wydatków, a także
+        przesyłanie oraz przechowywanie obrazów (np. profilowe) za pomocą
+        <b>Cloudinary</b>. Stylowanie zrealizowano przy użyciu
+        <b>SCSS Modules</b>, co zapewnia przejrzystość i modularność kodu CSS.
+        Formularze w aplikacji wykorzystują <b>form actions</b>.`,
+  projectDesc2:
+        `Narzędzie webowe umożliwiające tworzenie i edytowanie zapisu nutowego – głównie linii melodycznej – z możliwością precyzyjnego określania szczegółów muzycznych. 
+        Aplikacja oferuje szeroki zestaw funkcji, takich jak wybór wysokości dźwięków, wartości rytmicznych oraz tempa.
+        Użytkownik może zbudować własną sekwencję nut, a następnie ją odsłuchać dźwięk po dźwięku w wybranym tempie, co pozwala na szybkie testowanie i weryfikację brzmienia. 
+        Projekt skupia się na intuicyjnym interfejsie i precyzyjnym odwzorowaniu zapisu muzycznego, co czyni go przydatnym zarówno dla początkujących muzyków, jak i osób pracujących nad szkicami melodii.
+        Projekt został zrealizowany w oparciu o <b>React</b>, z użyciem technik zarządzania globalnym stanem <b>(createContext)</b> oraz <b>własnych hooków</b>. 
+        Obsługa formularzy i walidacja danych została zaimplementowana za pomocą <b>react-hook-form</b>, a możliwość wydruku gotowego zapisu nutowego zapewnia integracja z <b>react-to-print</b>.`,
+  projectDesc3:
+        `Nowoczesna aplikacja frontendowa, przeznaczona dla restauracji fast food, umożliwiająca klientom personalizację zamówień. 
+        Użytkownicy mogą wybierać dania z różnych kategorii, dostosowywać ich rozmiar oraz dobierać dodatki, co pozwala na zamówienia szyte na miarę.
+        Projekt powstał w <b>React</b>, z centralnym zarządzaniem stanem realizowanym za pomocą <b>Redux Toolkit</b>, co zapewnia przejrzystą logikę i efektywne przetwarzanie danych. 
+        Wykorzystanie <b>useMemo</b> optymalizuje wydajność przy renderowaniu list i koszyka, natomiast <b>własne hooki (custom hook)</b> poprawiają modularność i czytelność kodu. 
+        Interfejs użytkownika umożliwia intuicyjne dodawanie lub modyfikowanie zamówień, a całość zaprojektowano z myślą o łatwym skalowaniu i integracji w środowisku restauracyjnym - dane są odpowiednio przygotowane do np. umieszczenia ich w bazie danych.`,
+  projectDesc4:
+        `Aplikacja pogodowa napisana w <b>TypeScript</b>, umożliwiająca szybkie sprawdzenie warunków pogodowych w wybranym mieście. 
+        Aplikacja zawiera szereg praktycznych funkcji, m.in.:
+        wyszukiwanie miast z podpowiedziami i filtrowaniem, ustawianie domyślnego miasta (zapisywanego w <b>localStorage</b>),
+        automatyczne wykrywanie lokalizacji użytkownika i prezentacja pogody dla jego współrzędnych (ikona pinezki w polu wyszukiwania),
+        przełącznik jednostek temperatury (Celsiusz ↔ Fahrenheit), tryb ciemny (Dark Theme),
+        przechowywanie danych (nazwa miasta, współrzędne, ustawienia) w LocalStorage.
+        Projekt został stworzony z myślą o responsywności i wygodzie użytkownika, z dużym naciskiem na czysty kod i wykorzystanie możliwości TypeScriptu.`,
+  projectDesc5:
+        `Aplikacja filmowa umożliwiająca wyszukiwanie, przeglądanie i odkrywanie filmów, seriali oraz osób związanych z kinem. 
+        Dane pobierane są z zewnętrznego API i prezentowane w przejrzystej, intuicyjnej formie. Użytkownik może łatwo przeglądać szczegóły produkcji, takie jak opisy, obsada, daty premiery czy zwiastuny.
+        Projekt został zbudowany w <b>React</b> z wykorzystaniem <b>React Router</b> oraz <b>useLoaderData</b> do obsługi danych na poziomie routingu. 
+        Odtwarzanie zwiastunów i klipów wideo realizowane jest za pomocą <b>react-player</b>, co pozwala na płynną integrację materiałów multimedialnych. 
+        Aplikacja stawia na lekkość interfejsu i płynność nawigacji między stronami.`,
   htmlSkillsText: `I can design website structures using <b>semantic HTML elements</b>, which not only improves the readability of the code, but also has a positive effect on the website's accessibility and positioning in search results. I have experience in creating HTML forms using various field types and handling client-side validation using HTML5 attributes such as <i>required</i> and <i>pattern</i>. <br /> <br />
     I can use a variety of CSS selectors, including class and ID selectors, as well as pseudo-classes and pseudo-elements, to precisely style elements on a page. I have deep knowledge of <b>flexbox</b> and <b>grid layout</b>, which allows me to design flexible and responsive website layouts that scale perfectly on various devices. I have experience in working with CSS preprocessors such as <b>SASS</b> and <b>LESS</b>, which allows me to more conveniently manage style using variables, mixins and functions.`,
   jsSkillsText: `I am skilled in manipulating the DOM tree using JavaScript, which allows me to dynamically add, remove and modify elements on the page depending on user actions. I am familiar with <b>asynchrony concepts</b> in JavaScript such as <i>Callbacks</i>, <i>Promises</i> and <i>Async/Await</i>, which allows me to handle operations that require time-consuming data downloading from external sources (API). I know concepts such as primitive/complex types, event loop, destructuring, spread operator and scope. <br /> <br />

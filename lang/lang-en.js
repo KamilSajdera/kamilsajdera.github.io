@@ -26,17 +26,39 @@ window.translations = {
     "Collaboration is key. I thrive in development teams, I use GIT, I value clear commits, communication, and joint problem solving.",
   skillsText6:
     "I have a strong sense of aesthetics and attention to detail. I can refine interfaces to make them not only functional but also visually appealing. I pay close attention to spacing, colors, typography, and visual hierarchy.",
-  projectText1:
-    "A project simulating an 'organizer' thanks to which you keep your events, expenses and to-dos in one place.",
-  projectText2:
-    "A tool for creating sheet music ready for printing, with the ability to listen to the written melody line at any tempo.",
-  projectText3:
-    "The fast food restaurant app has a variety of customizable items to eat, sizes or toppings for each one.",
-  projectText4:
-    "Search, find and discover interesting movies, tv series and people related to cinema. Thanks to a clear interface, move very smoothly into page. You can check a lot of details. Data is fetching from an external API and prepared appropriately.",
-  projectText5:
-    "Weather app is an application that will allow you to check the weather and its parameters.",
-  projectText6: "",
+  projectDesc1:
+    `A fully-featured web application for managing everyday tasks, events, and expenses in one place.
+    Users can create an account, log in, and securely manage their data through <b>JSON Web Tokens (JWT)</b>-based authentication.
+    The backend is built with <b>Next.js</b> API Routes, and encrypted data is stored in <b>MongoDB</b>.
+    The app supports adding, editing, and deleting events, tasks, and expenses, as well as uploading and storing images (e.g., profile pictures) via <b>Cloudinary</b>.
+    Styling is implemented using <b>SCSS Modules</b>, ensuring modular and maintainable CSS.
+    Form handling leverages <b>form actions</b> for structured data submission`,
+  projectDesc2:
+    `A web tool for creating and editing musical notation—primarily melodic lines—with precise control over musical details.
+    Users can define note pitch, rhythm values, and tempo, then build custom note sequences and preview them step by step at any speed to test their sound.
+    Designed with an intuitive interface and accurate visual representation, this tool is useful for both beginner musicians and those sketching melody ideas.
+    Built with <b>React</b>, the project utilizes <b>createContext</b> for global state management, along with custom hooks for modular logic.
+    Form handling and validation are implemented using <b>react-hook-form</b>, and final sheet printing is available via <b>react-to-print</b> integration.`,
+  projectDesc3:
+    `A modern frontend application for fast food restaurants, enabling customers to fully customize their meals.
+    Users can browse meals by category, select size options, and choose add-ons—making every order fully personalized.
+    Developed in <b>React</b>, the project uses <b>Redux Toolkit</b> for centralized state management, ensuring clean logic and efficient data handling.
+    <b>useMemo</b> improves performance during list and cart rendering, and custom hooks enhance modularity and code clarity.
+    The UI is designed to allow intuitive ordering and modification of items, with the structure ready for integration into backend systems or databases.`,
+  projectDesc4:
+    `A weather application built with <b>TypeScript</b>, allowing users to quickly check current weather conditions in any city.
+    It offers multiple convenient features, including:
+    city search with suggestions and filtering, setting a default city saved in <b>localStorage</b>,
+    detecting user location and displaying local weather (via location pin icon),
+    temperature unit toggle (Celsius ↔ Fahrenheit), dark mode support,
+    persistent storage of city name, coordinates, and theme in localStorage.
+    The project emphasizes responsiveness, clean code, and full utilization of TypeScript’s type safety.`,
+  projectDesc5:
+    `A movie discovery application that allows users to search, browse, and explore movies, TV shows, and people from the world of cinema.
+    Data is fetched from an external API and presented in a clear and user-friendly layout. Users can view details such as plot summaries, cast, release dates, and trailers.
+    Built with <b>React</b>, the app uses <b>React Router</b> with <b>useLoaderData</b> for data management per route.
+    Trailers and video content are seamlessly integrated using <b>react-player</b>, ensuring smooth playback.
+    The application focuses on a lightweight interface and fluid navigation between views.`,
   htmlSkillsText: `I can design website structures using <b>semantic HTML elements</b>, which not only improves the readability of the code, but also has a positive effect on the website's accessibility and positioning in search results. I have experience in creating HTML forms using various field types and handling client-side validation using HTML5 attributes such as <i>required</i> and <i>pattern</i>. <br /> <br />
     I can use a variety of CSS selectors, including class and ID selectors, as well as pseudo-classes and pseudo-elements, to precisely style elements on a page. I have deep knowledge of <b>flexbox</b> and <b>grid layout</b>, which allows me to design flexible and responsive website layouts that scale perfectly on various devices. I have experience in working with CSS preprocessors such as <b>SASS</b> and <b>LESS</b>, which allows me to more conveniently manage style using variables, mixins and functions.`,
   jsSkillsText: `I am skilled in manipulating the DOM tree using JavaScript, which allows me to dynamically add, remove and modify elements on the page depending on user actions. I am familiar with <b>asynchrony concepts</b> in JavaScript such as <i>Callbacks</i>, <i>Promises</i> and <i>Async/Await</i>, which allows me to handle operations that require time-consuming data downloading from external sources (API). I know concepts such as primitive/complex types, event loop, destructuring, spread operator and scope. <br /> <br />
