@@ -26,7 +26,7 @@ const projectDescription = $(".myWorks_description");
 const projectGoNext = $(".myWorks_mainData main .arrow-right");
 const projectGoPrev = $(".myWorks_mainData main .arrow-left");
 let projectsDescFontSize = 1.75;
-let currentProjectNumber = 1;
+let currentProjectNumber = 4;
 
 function handle(event) {
   event.preventDefault();
@@ -367,6 +367,39 @@ const projectsArray = [
       "notesgenerator2.png",
       "notesgenerator3.png",
     ],
+  },
+  {
+    name: "Restauracja fastfood",
+    www_link: "fast-foodapp.netlify.app",
+    git_link: "/KamilSajdera/Food-Order-App",
+    description: `Nowoczesna aplikacja frontendowa, przeznaczona dla restauracji fast food, umożliwiająca klientom personalizację zamówień. Użytkownicy mogą wybierać dania z różnych kategorii, dostosowywać ich rozmiar oraz dobierać dodatki, co pozwala na zamówienia szyte na miarę.
+        Projekt powstał w React, z centralnym zarządzaniem stanem realizowanym za pomocą Redux Toolkit, co zapewnia przejrzystą logikę i efektywne przetwarzanie danych. Wykorzystanie useMemo optymalizuje wydajność przy renderowaniu list i koszyka, natomiast własne hooki (custom hook) poprawiają modularność i czytelność kodu. Interfejs użytkownika umożliwia intuicyjne dodawanie lub modyfikowanie zamówień, a całość zaprojektowano z myślą o łatwym skalowaniu i integracji w środowisku restauracyjnym - dane są odpowiednio przygotowane do np. umieszczenia ich w bazie danych.`,
+    pictures: ["foodapp.png", "foodapp2.png", "foodapp3.png"],
+  },
+  {
+    name: "Aplikacja pogodowa",
+    www_link: "kamilsajdera.github.io/weather-app",
+    git_link: "/KamilSajdera/weather-app/",
+    description: `Aplikacja pogodowa napisana w TypeScript, umożliwiająca szybkie sprawdzenie warunków pogodowych w wybranym mieście. Aplikacja zawiera szereg praktycznych funkcji, m.in.:
+wyszukiwanie miast z podpowiedziami i filtrowaniem,
+ustawianie domyślnego miasta (zapisywanego w localStorage),
+automatyczne wykrywanie lokalizacji użytkownika i prezentacja pogody dla jego współrzędnych (ikona pinezki w polu wyszukiwania),
+przełącznik jednostek temperatury (Celsiusz ↔ Fahrenheit),
+tryb ciemny (Dark Theme),
+przechowywanie danych (nazwa miasta, współrzędne, ustawienia) w LocalStorage.
+Projekt został stworzony z myślą o responsywności i wygodzie użytkownika, z dużym naciskiem na czysty kod i wykorzystanie możliwości TypeScriptu.`,
+    pictures: ["weatherapp.png", "weatherapp2.png", "weatherapp3.png"],
+  },
+  {
+    name: "Movies World",
+    www_link: "saydi-movies-world.netlify.app",
+    git_link: "/KamilSajdera/movies-world",
+    description: `Aplikacja filmowa umożliwiająca wyszukiwanie, przeglądanie i odkrywanie filmów, seriali oraz osób związanych z kinem. 
+    Dane pobierane są z zewnętrznego API i prezentowane w przejrzystej, intuicyjnej formie. Użytkownik może łatwo przeglądać szczegóły produkcji, takie jak opisy, obsada, daty premiery czy zwiastuny.
+Projekt został zbudowany w React z wykorzystaniem React Router oraz useLoaderData do obsługi danych na poziomie routingu. 
+Odtwarzanie zwiastunów i klipów wideo realizowane jest za pomocą react-player, co pozwala na płynną integrację materiałów multimedialnych. 
+Aplikacja stawia na lekkość interfejsu i płynność nawigacji między stronami.`,
+    pictures: ["moviesworld.png", "moviesworld2.png", "moviesworld3.png"],
   },
 ];
 
