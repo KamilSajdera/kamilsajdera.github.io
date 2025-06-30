@@ -19,6 +19,15 @@ const skillTextDescription = $(".skillSet__description p");
 let transitions;
 let descriptions = [];
 
+const projectLeftSide = $(".myWorks_mainData")[0];
+const projectRightSide = $(".myWorks_description")[0];
+const projectItem = $(".myWorks_mainData");
+const projectDescription = $(".myWorks_description");
+const projectGoNext = $(".myWorks_mainData main .arrow-right");
+const projectGoPrev = $(".myWorks_mainData main .arrow-left");
+let projectsDescFontSize = 1.75;
+let currentProjectNumber = 1;
+
 function handle(event) {
   event.preventDefault();
 }
@@ -272,56 +281,139 @@ function setLanguage(lang) {
     });
 }
 
-const projectLeftSide = $(".myWorks_mainData")[0];
-const projectRightSide = $(".myWorks_description")[0];
-
-let projectsDescFontSize = 1.75;
-
 $(document).ready(function () {
+  renderProjects();
+
   while (projectRightSide.clientHeight > projectLeftSide.clientHeight) {
     projectRightSide.style.fontSize = `${projectsDescFontSize}em`;
     projectsDescFontSize -= 0.05;
   }
 });
 
-const projectGoNext = $(".myWorks_mainData main .arrow-right");
-const projectGoPrev = $(".myWorks_mainData main .arrow-left");
-const projectsContainer = $(".myWorks_mainData .project-preview");
-const projectBeforeImage = $(
-  ".myWorks_mainData .project-preview .image-before"
-);
-const projectCenterImage = $(
-  ".myWorks_mainData .project-preview .image-center"
-);
-const projectAfterImage = $(".myWorks_mainData .project-preview .image-after");
+$(document).on("click", ".arrow-right", function () {
+  slideProject("next");
+});
 
-projectGoNext.click(() => {
-  projectsContainer.addClass("carousel-next");
+$(document).on("click", ".arrow-left", function () {
+  slideProject("prev");
+});
+
+function slideProject(type) {
+  const projectsContainer = $(".myWorks_mainData .project-preview");
+  const projectBeforeImage = $(
+    ".myWorks_mainData .project-preview .image-before"
+  );
+  const projectCenterImage = $(
+    ".myWorks_mainData .project-preview .image-center"
+  );
+  const projectAfterImage = $(
+    ".myWorks_mainData .project-preview .image-after"
+  );
 
   let storedBeforeImage = projectBeforeImage.find("img")[0].src;
   let storedCenterImage = projectCenterImage.find("img")[0].src;
   let storedAfterImage = projectAfterImage.find("img")[0].src;
 
-  setTimeout(() => {
-    projectsContainer.removeClass("carousel-next");
-    projectBeforeImage.find("img")[0].src = storedAfterImage;
-    projectCenterImage.find("img")[0].src = storedBeforeImage;
-    projectAfterImage.find("img")[0].src = storedCenterImage;
-  }, 600);
-});
+  if (type === "next") {
+    projectsContainer.addClass("carousel-next");
 
-projectGoPrev.click(() => {
-  projectsContainer.addClass("carousel-prev");
+    setTimeout(() => {
+      projectsContainer.removeClass("carousel-next");
+      projectBeforeImage.find("img")[0].src = storedAfterImage;
+      projectCenterImage.find("img")[0].src = storedBeforeImage;
+      projectAfterImage.find("img")[0].src = storedCenterImage;
+    }, 600);
+  } else {
+    projectsContainer.addClass("carousel-prev");
 
-  let storedBeforeImage = projectBeforeImage.find("img")[0].src;
-  let storedCenterImage = projectCenterImage.find("img")[0].src;
-  let storedAfterImage = projectAfterImage.find("img")[0].src;
+    setTimeout(() => {
+      projectsContainer.removeClass("carousel-prev");
+      projectBeforeImage.find("img")[0].src = storedCenterImage;
+      projectCenterImage.find("img")[0].src = storedAfterImage;
+      projectAfterImage.find("img")[0].src = storedBeforeImage;
+    }, 600);
+  }
+}
 
-  setTimeout(() => {
-    projectsContainer.removeClass("carousel-prev");
-    projectBeforeImage.find("img")[0].src = storedCenterImage;
-    projectCenterImage.find("img")[0].src = storedAfterImage;
-    projectAfterImage.find("img")[0].src = storedBeforeImage;
-  }, 600);
-});
+const projectsArray = [
+  {
+    name: "Organizer",
+    www_link: "organizer-wine.vercel.app",
+    git_link: "/KamilSajdera/organizer",
+    description: `Organizer to pełnoprawna aplikacja webowa służąca do zarządzania
+        codziennymi zadaniami, wydarzeniami i wydatkami w jednym miejscu.
+        Użytkownicy mogą tworzyć konto, logować się i zarządzać swoimi danymi
+        dzięki autoryzacji opartej na <b>JSON Web Tokens (JWT)</b>. Backend
+        został zbudowany z wykorzystaniem <b>Next.js API Routes</b>, a
+        zaszyfrowane dane przechowywane są w <b>MongoDB</b>. Aplikacja umożliwia
+        dodawanie, edycję i usuwanie wydarzeń, zadań oraz wydatków, a także
+        przesyłanie oraz przechowywanie obrazów (np. profilowe) za pomocą
+        <b>Cloudinary</b>. Stylowanie zrealizowano przy użyciu
+        <b>SCSS Modules</b>, co zapewnia przejrzystość i modularność kodu CSS.
+        Formularze w aplikacji wykorzystują <b>form actions</b>.`,
+    pictures: ["nextorganizer.png", "nextorganizer2.png", "nextorganizer3.png"],
+  },
+  {
+    name: "Generator nut",
+    www_link: "kamilsajdera.github.io/Notes-Generator",
+    git_link: "/KamilSajdera/Notes-Generator",
+    description: `Narzędzie webowe umożliwiające tworzenie i edytowanie zapisu nutowego – głównie linii melodycznej – z możliwością precyzyjnego określania szczegółów muzycznych. 
+        Aplikacja oferuje szeroki zestaw funkcji, takich jak wybór wysokości dźwięków, wartości rytmicznych oraz tempa.
+        Użytkownik może zbudować własną sekwencję nut, a następnie ją odsłuchać dźwięk po dźwięku w wybranym tempie, co pozwala na szybkie testowanie i weryfikację brzmienia. 
+        Projekt skupia się na intuicyjnym interfejsie i precyzyjnym odwzorowaniu zapisu muzycznego, co czyni go przydatnym zarówno dla początkujących muzyków, jak i osób pracujących nad szkicami melodii. Projekt został zrealizowany w oparciu o React, z użyciem technik zarządzania globalnym stanem (createContext) oraz własnych hooków. 
+        Obsługa formularzy i walidacja danych została zaimplementowana za pomocą react-hook-form, a możliwość wydruku gotowego zapisu nutowego zapewnia integracja z react-to-print.`,
+    pictures: [
+      "notesgenerator.png",
+      "notesgenerator2.png",
+      "notesgenerator3.png",
+    ],
+  },
+];
 
+function renderProjects() {
+  projectItem[0].innerHTML = `<header>
+          <h3>${projectsArray[currentProjectNumber].name}</h3>
+          <div class="sites">
+            <div class="site">
+              <img src="images/www.png" alt="WWW icon" />
+              <span class="links">
+                <a href="https://${projectsArray[currentProjectNumber].www_link}" target="_blank"
+                  >${projectsArray[currentProjectNumber].www_link}</a
+                ></span
+              >
+            </div>
+            <div class="site">
+              <img src="images/git.png" alt="Github icon" class="git" />
+              <span class="links"
+                ><a
+                  href="https://github.com${projectsArray[currentProjectNumber].git_link}"
+                  target="_blank"
+                  >${projectsArray[currentProjectNumber].git_link}</a
+                ></span
+              >
+            </div>
+          </div>
+        </header>
+        <main>
+          <div class="arrow-left">
+            <img src="images/left.png" alt="arrow-left" />
+          </div>
+          <div class="arrow-right">
+            <img src="images/right.png" alt="arrow-right" />
+          </div>
+          <div class="project-preview">
+            <div class="image-before">
+              <img src="images/${projectsArray[currentProjectNumber].pictures[1]}" alt="Project preview" />
+            </div>
+            <div class="image-center">
+              <img src="images/${projectsArray[currentProjectNumber].pictures[0]}" alt="Project preview" />
+            </div>
+            <div class="image-after">
+              <img src="images/${projectsArray[currentProjectNumber].pictures[2]}" alt="Project preview" />
+            </div>
+          </div>
+        </main>`;
+
+  projectDescription[0].innerHTML =
+    projectsArray[currentProjectNumber].description;
+}
