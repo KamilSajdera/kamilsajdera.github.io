@@ -445,6 +445,19 @@ body {
   padding: 40px 20px;
   @include setFlex(row, space-between, flex-start);
 
+  &_timeline {
+    width: 100%;
+  }
+
+  &_loading-line {
+    width: 0;
+    height: 3px;
+    background: #5a7dd7;
+    margin-top: -35px;
+    border-radius: 5px;
+    transition: width 1500ms linear;
+  }
+
   &_mainData {
     width: 60%;
     margin-top: -20px;
@@ -512,8 +525,8 @@ body {
         &.carousel-next {
           .image-before {
             @include projectImageCenter();
-            z-index: 4!important;
-            position: relative!important;
+            z-index: 4 !important;
+            position: relative !important;
             transition: all 0.6s ease-in-out;
           }
 
@@ -524,6 +537,26 @@ body {
 
           .image-center {
             @include projectImageAfter();
+            transition: all 0.6s ease-in-out;
+            position: absolute;
+          }
+        }
+
+        &.carousel-prev {
+          .image-before {
+            @include projectImageAfter();
+            transition: all 0.6s ease-in-out;
+          }
+
+          .image-after {
+            @include projectImageCenter();
+            z-index: 4 !important;
+            position: relative !important;
+            transition: all 0.6s ease-in-out;
+          }
+
+          .image-center {
+            @include projectImageBefore();
             transition: all 0.6s ease-in-out;
             position: absolute;
           }

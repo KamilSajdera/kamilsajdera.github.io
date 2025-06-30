@@ -23,7 +23,12 @@ const projectItem = $(".myWorks_mainData");
 const projectDescription = $(".myWorks_description");
 const projectGoNext = $(".myWorks_mainData main .arrow-right");
 const projectGoPrev = $(".myWorks_mainData main .arrow-left");
+const projectsLine = $(".myWorks_loading-line");
+
 let currentProjectNumber = 0;
+let duration = 10;
+let currentWidth = 0;
+let intervalId;
 
 function handle(event) {
   event.preventDefault();
@@ -113,6 +118,8 @@ $(".topBar_language_EN").click(function () {
   $(".topBar_language_PL").removeClass("active_lan");
 });
 
+let blockLine = false;
+
 $(window).on("scroll", function () {
   let scrollValue = $(window).scrollTop();
   const bgWrapper = $("#mainWrapper");
@@ -122,7 +129,7 @@ $(window).on("scroll", function () {
   const myWorks = $("#myWorks").offset().top;
   const contact = $("#contact").offset().top;
 
-  if ($(window).scrollTop() > 100) $(".topBar").addClass("menu_sticky");
+  if (scrollValue > 100) $(".topBar").addClass("menu_sticky");
   else $(".topBar").removeClass("menu_sticky");
 
   /// paralax on main header
@@ -153,6 +160,13 @@ $(window).on("scroll", function () {
       }, 1000 / 60);
 
       block = true;
+    }
+
+    if (scrollValue + 400 > projectsLine.offset().top) {
+      if (!blockLine) {
+        switchProjects();
+        blockLine = true;
+      }
     }
   }
 
@@ -277,7 +291,6 @@ function setLanguage(lang) {
     .fail(function () {
       console.error("Error -> Failed to fetch lang file!");
     });
-
 }
 
 $(document).on("click", ".arrow-right", function () {
@@ -415,7 +428,7 @@ function renderProjects() {
     "data-i18n",
     projectsArray[currentProjectNumber].description_lang
   );
-
+  
 }
 
 function adjustFontSizeToFit() {
@@ -435,4 +448,24 @@ function adjustFontSizeToFit() {
       counter++;
     }
   }, 0);
+}
+
+function switchProjects() {
+  clearInterval(intervalId);
+
+  if (currentWidth >= 100) {
+    if (currentProjectNumber++ >= 4) currentProjectNumber = 0;
+
+    renderProjects();
+
+    currentWidth = 0;
+    projectsLine.css("width", "0");
+    intervalId = setInterval(switchProjects, 1500);
+    return;
+  }
+
+  currentWidth += duration;
+  projectsLine.css("width", `${currentWidth}%`);
+
+  intervalId = setInterval(switchProjects, 1500);
 }
