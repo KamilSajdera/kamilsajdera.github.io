@@ -26,7 +26,7 @@ const projectDescription = $(".myWorks_description");
 const projectGoNext = $(".myWorks_mainData main .arrow-right");
 const projectGoPrev = $(".myWorks_mainData main .arrow-left");
 let projectsDescFontSize = 1.75;
-let currentProjectNumber = 4;
+let currentProjectNumber = 0;
 
 function handle(event) {
   event.preventDefault();
@@ -340,28 +340,14 @@ const projectsArray = [
     name: "Organizer",
     www_link: "organizer-wine.vercel.app",
     git_link: "/KamilSajdera/organizer",
-    description: `Organizer to pełnoprawna aplikacja webowa służąca do zarządzania
-        codziennymi zadaniami, wydarzeniami i wydatkami w jednym miejscu.
-        Użytkownicy mogą tworzyć konto, logować się i zarządzać swoimi danymi
-        dzięki autoryzacji opartej na <b>JSON Web Tokens (JWT)</b>. Backend
-        został zbudowany z wykorzystaniem <b>Next.js API Routes</b>, a
-        zaszyfrowane dane przechowywane są w <b>MongoDB</b>. Aplikacja umożliwia
-        dodawanie, edycję i usuwanie wydarzeń, zadań oraz wydatków, a także
-        przesyłanie oraz przechowywanie obrazów (np. profilowe) za pomocą
-        <b>Cloudinary</b>. Stylowanie zrealizowano przy użyciu
-        <b>SCSS Modules</b>, co zapewnia przejrzystość i modularność kodu CSS.
-        Formularze w aplikacji wykorzystują <b>form actions</b>.`,
+    description_lang: "projectDesc1",
     pictures: ["nextorganizer.png", "nextorganizer2.png", "nextorganizer3.png"],
   },
   {
     name: "Generator nut",
     www_link: "kamilsajdera.github.io/Notes-Generator",
     git_link: "/KamilSajdera/Notes-Generator",
-    description: `Narzędzie webowe umożliwiające tworzenie i edytowanie zapisu nutowego – głównie linii melodycznej – z możliwością precyzyjnego określania szczegółów muzycznych. 
-        Aplikacja oferuje szeroki zestaw funkcji, takich jak wybór wysokości dźwięków, wartości rytmicznych oraz tempa.
-        Użytkownik może zbudować własną sekwencję nut, a następnie ją odsłuchać dźwięk po dźwięku w wybranym tempie, co pozwala na szybkie testowanie i weryfikację brzmienia. 
-        Projekt skupia się na intuicyjnym interfejsie i precyzyjnym odwzorowaniu zapisu muzycznego, co czyni go przydatnym zarówno dla początkujących muzyków, jak i osób pracujących nad szkicami melodii. Projekt został zrealizowany w oparciu o React, z użyciem technik zarządzania globalnym stanem (createContext) oraz własnych hooków. 
-        Obsługa formularzy i walidacja danych została zaimplementowana za pomocą react-hook-form, a możliwość wydruku gotowego zapisu nutowego zapewnia integracja z react-to-print.`,
+    description_lang: "projectDesc2",
     pictures: [
       "notesgenerator.png",
       "notesgenerator2.png",
@@ -372,33 +358,21 @@ const projectsArray = [
     name: "Restauracja fastfood",
     www_link: "fast-foodapp.netlify.app",
     git_link: "/KamilSajdera/Food-Order-App",
-    description: `Nowoczesna aplikacja frontendowa, przeznaczona dla restauracji fast food, umożliwiająca klientom personalizację zamówień. Użytkownicy mogą wybierać dania z różnych kategorii, dostosowywać ich rozmiar oraz dobierać dodatki, co pozwala na zamówienia szyte na miarę.
-        Projekt powstał w React, z centralnym zarządzaniem stanem realizowanym za pomocą Redux Toolkit, co zapewnia przejrzystą logikę i efektywne przetwarzanie danych. Wykorzystanie useMemo optymalizuje wydajność przy renderowaniu list i koszyka, natomiast własne hooki (custom hook) poprawiają modularność i czytelność kodu. Interfejs użytkownika umożliwia intuicyjne dodawanie lub modyfikowanie zamówień, a całość zaprojektowano z myślą o łatwym skalowaniu i integracji w środowisku restauracyjnym - dane są odpowiednio przygotowane do np. umieszczenia ich w bazie danych.`,
+    description_lang: "projectDesc3",
     pictures: ["foodapp.png", "foodapp2.png", "foodapp3.png"],
   },
   {
     name: "Aplikacja pogodowa",
     www_link: "kamilsajdera.github.io/weather-app",
     git_link: "/KamilSajdera/weather-app/",
-    description: `Aplikacja pogodowa napisana w TypeScript, umożliwiająca szybkie sprawdzenie warunków pogodowych w wybranym mieście. Aplikacja zawiera szereg praktycznych funkcji, m.in.:
-wyszukiwanie miast z podpowiedziami i filtrowaniem,
-ustawianie domyślnego miasta (zapisywanego w localStorage),
-automatyczne wykrywanie lokalizacji użytkownika i prezentacja pogody dla jego współrzędnych (ikona pinezki w polu wyszukiwania),
-przełącznik jednostek temperatury (Celsiusz ↔ Fahrenheit),
-tryb ciemny (Dark Theme),
-przechowywanie danych (nazwa miasta, współrzędne, ustawienia) w LocalStorage.
-Projekt został stworzony z myślą o responsywności i wygodzie użytkownika, z dużym naciskiem na czysty kod i wykorzystanie możliwości TypeScriptu.`,
+    description_lang: "projectDesc4",
     pictures: ["weatherapp.png", "weatherapp2.png", "weatherapp3.png"],
   },
   {
     name: "Movies World",
     www_link: "saydi-movies-world.netlify.app",
     git_link: "/KamilSajdera/movies-world",
-    description: `Aplikacja filmowa umożliwiająca wyszukiwanie, przeglądanie i odkrywanie filmów, seriali oraz osób związanych z kinem. 
-    Dane pobierane są z zewnętrznego API i prezentowane w przejrzystej, intuicyjnej formie. Użytkownik może łatwo przeglądać szczegóły produkcji, takie jak opisy, obsada, daty premiery czy zwiastuny.
-Projekt został zbudowany w React z wykorzystaniem React Router oraz useLoaderData do obsługi danych na poziomie routingu. 
-Odtwarzanie zwiastunów i klipów wideo realizowane jest za pomocą react-player, co pozwala na płynną integrację materiałów multimedialnych. 
-Aplikacja stawia na lekkość interfejsu i płynność nawigacji między stronami.`,
+    description_lang: "projectDesc5",
     pictures: ["moviesworld.png", "moviesworld2.png", "moviesworld3.png"],
   },
 ];
@@ -447,6 +421,5 @@ function renderProjects() {
           </div>
         </main>`;
 
-  projectDescription[0].innerHTML =
-    projectsArray[currentProjectNumber].description;
+  projectDescription.attr("data-i18n", projectsArray[currentProjectNumber].description_lang)
 }
