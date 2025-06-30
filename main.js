@@ -19,13 +19,10 @@ const skillTextDescription = $(".skillSet__description p");
 let transitions;
 let descriptions = [];
 
-const projectLeftSide = $(".myWorks_mainData")[0];
-const projectRightSide = $(".myWorks_description")[0];
 const projectItem = $(".myWorks_mainData");
 const projectDescription = $(".myWorks_description");
 const projectGoNext = $(".myWorks_mainData main .arrow-right");
 const projectGoPrev = $(".myWorks_mainData main .arrow-left");
-let projectsDescFontSize = 1.75;
 let currentProjectNumber = 0;
 
 function handle(event) {
@@ -34,6 +31,7 @@ function handle(event) {
 
 $(function () {
   const language = localStorage.getItem("lang") || "en";
+  renderProjects();
   setLanguage(language);
 
   if (language === "pl") {
@@ -54,8 +52,6 @@ $(function () {
   }
 
   myAgeContainer.text(myAge);
-
-  let i = 0;
 
   $(".topBar_navigate ul").css("visibility", "visible");
 });
@@ -275,20 +271,14 @@ function setLanguage(lang) {
         i++;
         if (i >= mainCaption.length) clearInterval(typing);
       }, 100);
+
+      adjustFontSizeToFit();
     })
     .fail(function () {
       console.error("Error -> Failed to fetch lang file!");
     });
+
 }
-
-$(document).ready(function () {
-  renderProjects();
-
-  while (projectRightSide.clientHeight > projectLeftSide.clientHeight) {
-    projectRightSide.style.fontSize = `${projectsDescFontSize}em`;
-    projectsDescFontSize -= 0.05;
-  }
-});
 
 $(document).on("click", ".arrow-right", function () {
   slideProject("next");
@@ -421,5 +411,28 @@ function renderProjects() {
           </div>
         </main>`;
 
-  projectDescription.attr("data-i18n", projectsArray[currentProjectNumber].description_lang)
+  projectDescription.attr(
+    "data-i18n",
+    projectsArray[currentProjectNumber].description_lang
+  );
+
+}
+
+function adjustFontSizeToFit() {
+  let projectsDescFontSize = 1.75;
+  projectDescription[0].style.fontSize = `${projectsDescFontSize}em`;
+
+  setTimeout(() => {
+    let counter = 0;
+    const maxTries = 50;
+
+    while (
+      projectDescription[0].clientHeight > projectItem[0].clientHeight &&
+      counter < maxTries
+    ) {
+      projectDescription[0].style.fontSize = `${projectsDescFontSize}em`;
+      projectsDescFontSize -= 0.03;
+      counter++;
+    }
+  }, 0);
 }
