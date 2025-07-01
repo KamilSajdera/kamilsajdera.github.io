@@ -36,7 +36,6 @@ function handle(event) {
 
 $(function () {
   const language = localStorage.getItem("lang") || "en";
-  renderProjects();
   setLanguage(language);
 
   if (language === "pl") {
@@ -252,9 +251,8 @@ function setLanguage(lang) {
 
   $.getScript(`lang/lang-${lang}.js`)
     .done(function () {
-      const elements = $("[data-i18n]");
       let translation = window.translations;
-
+      
       mainCaption = translation.welcome2;
       descriptions = translation.descriptions;
 
@@ -263,12 +261,8 @@ function setLanguage(lang) {
       chartBars.removeClass("active");
       chartBars.eq(0).addClass("active");
 
-      elements.each(function () {
-        const key = $(this).data("i18n");
-        if (translation[key]) {
-          $(this).html(translation[key]);
-        }
-      });
+      renderProjects();
+      translateElements();
 
       displayCaption = "";
       let i = 0;
@@ -428,8 +422,29 @@ function renderProjects() {
     "data-i18n",
     projectsArray[currentProjectNumber].description_lang
   );
-  
+
+  translateElements();
 }
+
+function translateElements() {
+  const translation = window.translations;
+  if (!translation) {
+    console.warn("Brak załadowanych tłumaczeń!");
+    return;
+  }
+
+  const elements = $("[data-i18n]");
+  
+  elements.each(function () {
+    const key = $(this).attr("data-i18n");
+    if (translation[key]) {
+      $(this).html(translation[key]);
+    } else {
+      console.warn(`Brak tłumaczenia dla klucza: ${key}`);
+    }
+  });
+}
+
 
 function adjustFontSizeToFit() {
   let projectsDescFontSize = 1.75;
@@ -457,6 +472,7 @@ function switchProjects() {
     if (currentProjectNumber++ >= 4) currentProjectNumber = 0;
 
     renderProjects();
+    adjustFontSizeToFit();
 
     currentWidth = 0;
     projectsLine.css("width", "0");
