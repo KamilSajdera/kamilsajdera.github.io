@@ -447,6 +447,9 @@ function translateElements() {
 
 
 function adjustFontSizeToFit() {
+
+  if(window.innerWidth < 1400) return;
+
   let projectsDescFontSize = 1.75;
   projectDescription[0].style.fontSize = `${projectsDescFontSize}em`;
 
