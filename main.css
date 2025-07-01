@@ -379,8 +379,9 @@ body {
   transition: width 1500ms linear;
 }
 .myWorks_mainData {
-  width: 60%;
+  width: 100%;
   margin-top: -20px;
+  font-size: 14px;
 }
 .myWorks_mainData header {
   width: 100%;
@@ -388,7 +389,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   border-bottom: 1px solid #272727;
 }
@@ -398,6 +399,11 @@ body {
   display: inline-block;
   font-size: 1.45em;
   border-radius: 5px;
+  margin-bottom: 10px;
+}
+.myWorks_mainData header .sites {
+  width: 90%;
+  margin: auto;
 }
 .myWorks_mainData header .sites .site {
   display: flex;
@@ -405,7 +411,12 @@ body {
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  gap: 10px;
+  flex-wrap: nowrap;
+  width: 100%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  gap: 7px;
 }
 .myWorks_mainData header .sites .site a {
   color: #dbdbdb;
@@ -416,7 +427,7 @@ body {
   color: #a681f0;
 }
 .myWorks_mainData header .sites .site img {
-  width: 42px;
+  width: 30px;
 }
 .myWorks_mainData header .sites .site .git {
   filter: invert(0.9);
@@ -437,6 +448,7 @@ body {
   cursor: pointer;
   z-index: 10;
   position: relative;
+  display: none;
 }
 .myWorks_mainData main .project-preview {
   position: relative;
@@ -511,6 +523,7 @@ body {
   z-index: 1;
   box-shadow: -5px -2px 10px 4px #262626;
   filter: none;
+  display: none;
 }
 .myWorks_mainData main .project-preview .image-after {
   transform: translateY(5px) translateX(80px) rotate(5deg);
@@ -518,6 +531,7 @@ body {
   z-index: 1;
   box-shadow: 5px -2px 10px 4px #262626;
   filter: none;
+  display: none;
 }
 .myWorks_mainData main .project-preview .image-center {
   z-index: 2;
@@ -532,11 +546,12 @@ body {
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
 }
 .myWorks_description {
-  margin-top: -20px;
-  width: 30%;
-  font-size: 1.75em;
+  margin-top: 10px;
+  width: 100%;
+  font-size: 0.9em;
   font-weight: 500;
   z-index: 3;
+  text-align: justify;
 }
 .myWorks_item {
   width: 85%;

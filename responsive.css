@@ -55,6 +55,42 @@
   .chartWrapper_labels {
     width: 18%;
   }
+  .myWorks {
+    padding-inline: 5%;
+  }
+  .myWorks_mainData {
+    font-size: 16px;
+  }
+  .myWorks_mainData header {
+    justify-content: space-between;
+  }
+  .myWorks_mainData header .sites {
+    width: auto;
+    margin: 0;
+  }
+  .myWorks_mainData header .sites .site {
+    gap: 10px;
+  }
+  .myWorks_mainData main .arrow-left img,
+  .myWorks_mainData main .arrow-right img {
+    display: block;
+  }
+  .myWorks_mainData main .project-preview {
+    width: 75%;
+  }
+  .myWorks_mainData main .project-preview .image-before,
+  .myWorks_mainData main .project-preview .image-after {
+    display: block;
+  }
+  .myWorks_description {
+    font-size: 1.05em;
+    margin-top: 20px;
+  }
+}
+@media only screen and (min-width: 930px) {
+  .myWorks_mainData main .project-preview {
+    width: 85%;
+  }
 }
 @media only screen and (min-width: 1023px) {
   .topBar_navigate {
@@ -189,6 +225,14 @@
   .footer .socials {
     width: 30%;
     margin-left: 15%;
+  }
+  .myWorks_mainData {
+    width: 60%;
+  }
+  .myWorks_description {
+    width: 33%;
+    margin-top: -20px;
+    font-size: 1.75em;
   }
 }
 @media only screen and (min-width: 1920px) {

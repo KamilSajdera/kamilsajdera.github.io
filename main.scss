@@ -459,13 +459,14 @@ body {
   }
 
   &_mainData {
-    width: 60%;
+    width: 100%;
     margin-top: -20px;
+    font-size: 14px;
 
     header {
       width: 100%;
       padding-bottom: 10px;
-      @include setFlex(row, space-between);
+      @include setFlex(row, center);
       border-bottom: 1px solid #272727;
 
       h3 {
@@ -474,12 +475,21 @@ body {
         display: inline-block;
         font-size: 1.45em;
         border-radius: 5px;
+        margin-bottom: 10px;
       }
 
       .sites {
+        width: 90%;
+        margin: auto;
+
         .site {
           @include setFlex(row, flex-start);
-          gap: 10px;
+          flex-wrap: nowrap;
+          width: 100%;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          gap: 7px;
 
           a {
             color: #dbdbdb;
@@ -492,7 +502,7 @@ body {
           }
 
           img {
-            width: 42px;
+            width: 30px;
           }
 
           .git {
@@ -514,6 +524,7 @@ body {
         cursor: pointer;
         z-index: 10;
         position: relative;
+        display: none;
       }
 
       .project-preview {
@@ -572,10 +583,12 @@ body {
 
         .image-before {
           @include projectImageBefore();
+          display: none;
         }
 
         .image-after {
           @include projectImageAfter();
+          display: none;
         }
 
         .image-center {
@@ -592,11 +605,12 @@ body {
   }
 
   &_description {
-    margin-top: -20px;
-    width: 30%;
-    font-size: 1.75em;
+    margin-top: 10px;
+    width: 100%;
+    font-size: 0.9em;
     font-weight: 500;
     z-index: 3;
+    text-align: justify;
   }
 
   &_item {
