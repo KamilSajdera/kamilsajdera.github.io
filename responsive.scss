@@ -286,6 +286,11 @@
     margin-top: -20px;
     font-size: 1.75em;
   }
+
+  .myWorks_mainData main .project-preview {
+    min-height: 310px;
+    max-height: 310px;
+  }
 }
 
 @media only screen and (min-width: 1920px) {
@@ -334,4 +339,10 @@
       font-size: 1.1rem;
     }
   }
+
+  .myWorks_mainData main .project-preview {
+    min-height: 320px;
+    max-height: 350px;
+  }
+
 }
