@@ -362,7 +362,7 @@ const projectsArray = [
     www_link: "fast-foodapp.netlify.app",
     git_link: "/KamilSajdera/Food-Order-App",
     description_lang: "projectDesc3",
-    pictures: ["foodapp.png", "foodapp2.png", "foodapp3.png"],
+    pictures: ["food_app.png", "foodapp2.png", "foodapp3.png"],
   },
   {
     name: "Aplikacja pogodowa",
