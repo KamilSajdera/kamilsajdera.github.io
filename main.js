@@ -484,10 +484,10 @@ function switchProjects() {
     return;
   }
 
-  currentWidth += duration;
+  currentWidth += 1;
   projectsLine.css("width", `${currentWidth}%`);
 
-  intervalId = setInterval(switchProjects, 1500);
+  intervalId = setInterval(switchProjects, 500);
 }
 
 $(".myWorks_dots-item").each(function (index) {
