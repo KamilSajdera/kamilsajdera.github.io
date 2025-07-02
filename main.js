@@ -252,7 +252,7 @@ function setLanguage(lang) {
   $.getScript(`lang/lang-${lang}.js`)
     .done(function () {
       let translation = window.translations;
-      
+
       mainCaption = translation.welcome2;
       descriptions = translation.descriptions;
 
@@ -375,6 +375,9 @@ const projectsArray = [
 ];
 
 function renderProjects() {
+  $(".myWorks_dots-item").removeClass("active");
+  $(".myWorks_dots-item").eq(currentProjectNumber).addClass("active");
+
   projectItem[0].innerHTML = `<header>
           <h3>${projectsArray[currentProjectNumber].name}</h3>
           <div class="sites">
@@ -434,7 +437,7 @@ function translateElements() {
   }
 
   const elements = $("[data-i18n]");
-  
+
   elements.each(function () {
     const key = $(this).attr("data-i18n");
     if (translation[key]) {
@@ -445,10 +448,8 @@ function translateElements() {
   });
 }
 
-
 function adjustFontSizeToFit() {
-
-  if(window.innerWidth < 1400) return;
+  if (window.innerWidth < 1400) return;
 
   let projectsDescFontSize = 1.75;
   projectDescription[0].style.fontSize = `${projectsDescFontSize}em`;
@@ -488,3 +489,13 @@ function switchProjects() {
 
   intervalId = setInterval(switchProjects, 1500);
 }
+
+$(".myWorks_dots-item").each(function (index) {
+  $(this).on("click", function () {
+    currentProjectNumber = index;
+    currentWidth = 0;
+    projectsLine.css("width", "0");
+    renderProjects();
+    switchProjects();
+  });
+});

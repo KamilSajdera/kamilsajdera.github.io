@@ -447,13 +447,35 @@ body {
 
   &_timeline {
     width: 100%;
+    margin-top: -35px;
+    position: relative;
+  }
+
+  &_dots {
+    position: absolute;
+    top: -20px;
+    right: 0;
+    display: flex;
+    gap: 12px;
+
+    &-item {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: #fff;
+      cursor: pointer;
+
+      &.active {
+        background: #ba7dfb;
+        box-shadow: none;
+      }
+    }
   }
 
   &_loading-line {
     width: 0;
     height: 3px;
     background: #5a7dd7;
-    margin-top: -35px;
     border-radius: 5px;
     transition: width 1500ms linear;
   }
