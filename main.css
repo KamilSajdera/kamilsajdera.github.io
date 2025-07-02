@@ -789,10 +789,10 @@ body {
 .footer .socials {
   width: 100%;
   text-align: center;
-  margin: 85px auto 30px auto;
+  margin: 40px auto 30px auto;
 }
 .footer .socials_item {
-  padding: 10px 0;
+  padding: 5px 0;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;

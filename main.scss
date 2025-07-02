@@ -874,10 +874,10 @@ body {
   .socials {
     width: 100%;
     text-align: center;
-    margin: 85px auto 30px auto;
+    margin: 40px auto 30px auto;
 
     &_item {
-      padding: 10px 0;
+      padding: 5px 0;
       @include setFlex(row, flex-start);
 
       i {
