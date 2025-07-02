@@ -135,7 +135,7 @@ $(window).on("scroll", function () {
   bgWrapper.css("top", `${scrollValue * 0.5}px`);
 
   /// chart bars growing
-  if (scrollValue + 300 >= $(".chartWrapper").offset().top) {
+  if (scrollValue + 400 >= $(".chartWrapper").offset().top) {
     if (!block) {
       setInterval(() => {
         if (bar_height++ >= 75) return;
