@@ -378,7 +378,7 @@ function renderProjects() {
   $(".myWorks_dots-item").removeClass("active");
   $(".myWorks_dots-item").eq(currentProjectNumber).addClass("active");
 
-  projectItem[0].innerHTML = `<header>
+  projectItem[0].innerHTML = `<header data-aos="fade-in" data-aos-duration="400" data-aos-delay="200">
           <h3>${projectsArray[currentProjectNumber].name}</h3>
           <div class="sites">
             <div class="site">
@@ -402,21 +402,21 @@ function renderProjects() {
           </div>
         </header>
         <main>
-          <div class="arrow-left">
+          <div class="arrow-left" data-aos="fade-right" data-aos-duration="400" data-aos-delay="200">
             <img src="images/left.png" alt="arrow-left" />
           </div>
-          <div class="arrow-right">
+          <div class="arrow-right" data-aos="fade-left" data-aos-duration="400" data-aos-delay="200">
             <img src="images/right.png" alt="arrow-right" />
           </div>
           <div class="project-preview">
             <div class="image-before">
-              <img src="images/${projectsArray[currentProjectNumber].pictures[1]}" alt="Project preview" />
+              <img src="images/${projectsArray[currentProjectNumber].pictures[1]}" alt="Project preview" data-aos="fade-up-right" data-aos-duration="700" data-aos-delay="200"/>
             </div>
             <div class="image-center">
-              <img src="images/${projectsArray[currentProjectNumber].pictures[0]}" alt="Project preview" />
+              <img src="images/${projectsArray[currentProjectNumber].pictures[0]}" alt="Project preview" data-aos="zoom-in" data-aos-duration="400" data-aos-delay="200" />
             </div>
             <div class="image-after">
-              <img src="images/${projectsArray[currentProjectNumber].pictures[2]}" alt="Project preview" />
+              <img src="images/${projectsArray[currentProjectNumber].pictures[2]}" alt="Project preview" data-aos="fade-up-left" data-aos-duration="700" data-aos-delay="200" />
             </div>
           </div>
         </main>`;
